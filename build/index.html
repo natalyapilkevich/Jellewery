@@ -7,11 +7,11 @@
   <meta name="keywords" content="Магазин, ювелирный, украшения">
   <meta name="description" content="Интернет-магазин ювелирных украшений">
   <title>Jewellery</title>
-  <link rel="preload" href="fonts/ralewayextrabold.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" crossorigin="">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <header class="header header--opened">
+  <header class="header header--nojs header--opened">
     <div class="header__top">
       <button type="button">
         <span class="visually-hidden">Открыть/скрыть меню</span>
@@ -36,9 +36,9 @@
     </div>
     <nav class="header__nav">
       <ul class="header__main-menu">
-        <li><a href="#">What’s new</a></li>
+        <li><a href="catalog.html">What’s new</a></li>
         <li><a href="#">Chokers</a></li>
-        <li><a href="#">Necklaces</a></li>
+        <li><a href="necklace.html">Necklaces</a></li>
         <li><a href="#">Rings</a></li>
         <li><a href="#">Earrings</a></li>
       </ul>
@@ -49,7 +49,77 @@
       </ul>
     </nav>
   </header>
-
+  <main class="main">
+    <h1 class="visually-hidden">Ювелирные украшения</h1>
+    <section class="topic">
+      <h2>perfection</h2>
+      <p>made to be yours</p>
+    </section>
+    <section class="new">
+      <div class="new__wrapper">
+        <h2>New In</h2>
+        <a href="catalog.html">Shop Now</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__main">
+        <div class="footer__mail-form">
+          <h2>The good stuff<br class="br-mobile"> in your inbox</h2>
+          <p>News and updates from CH.<br class="br-mobile"> No spam, we promise.</p>
+          <form>
+            <label for="usermail"><span class="visually-hidden">Ваша почта</span></label>
+            <input id="usermail" type="email" name="usermail" placeholder="Your E-mail">
+          </form>
+          <a href="#">
+            <span>Sign Up</span>
+            <svg width="32" height="10"><use xlink:href="img/sprite_auto.svg#icon-arrow_right"></use></svg>
+          </a>
+        </div>
+        <div class="footer__menu">
+          <ul>
+            <li><a href="#">Ordering & Payment</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Delivery</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">About CH</a></li>
+            <li><a href="#">Stores & Hours</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <ul class="footer__social">
+            <li>
+              <a href="#">
+                <svg width="15" height="15"><use xlink:href="img/sprite_auto.svg#icon-facebook"></use></svg>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="15" height="15"><use xlink:href="img/sprite_auto.svg#icon-instagram"></use></svg>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="15" height="15"><use xlink:href="img/sprite_auto.svg#icon-pinterest"></use></svg>
+                <span>Pinterest</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="15" height="13"><use xlink:href="img/sprite_auto.svg#icon-twitter"></use></svg>
+                <span>Twitter</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
