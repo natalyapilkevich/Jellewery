@@ -1,16 +1,3 @@
 .main {
   flex: 1 0 auto;
-  min-height: 3587px;
-}
-
-@media (max-width: $tablet-width-only) {
-  .main {
-    min-height: 3573px;
-  }
-}
-
-@media (max-width: $mobile-width-only) {
-  .main {
-    min-height: 3977px;
-  }
 }

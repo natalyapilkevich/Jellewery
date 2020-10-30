@@ -100,10 +100,6 @@
   margin-left: 2px;
 }
 
-.header__bag svg {
-  display: none;
-}
-
 @media (min-width: $desktop-width) {
   .header__nav .header__main-menu--catalog {
     display: flex;
@@ -306,16 +302,31 @@
     color: white;
   }
 
+  .header__bag {
+    position: relative;
+    width: 20px;
+    height: 18px;
+  }
+
   .header__bag span {
     display: none;
   }
 
-  .header__tools svg {
-    display: block;
+  .header__bag::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: -1px;
+    width: 20px;
+    height: 18px;
+    background-image: url("../img/icon-shop_bag.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .header--opened svg,
-  .header--opened button::before {
+  .header--opened button::before,
+  .header--opened .header__bag::after {
     filter: brightness(0) invert(1);
   }
 

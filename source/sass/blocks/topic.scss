@@ -3,11 +3,11 @@
   margin: 0 auto;
   padding: 187px 0 179px 1px;
   box-sizing: border-box;
-  background: url("../img/bg-main-topic-desktop@1x.jpg") center no-repeat;
+  background: #a87b62 url("../img/bg-main-topic-desktop@1x.jpg") center no-repeat;
   background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: url("../img/bg-main-topic-desktop@2x.jpg") center no-repeat;
+    background: #a87b62 url("../img/bg-main-topic-desktop@2x.jpg") center no-repeat;
     background-size: cover;
   }
 }
@@ -40,11 +40,11 @@
 
 .topic--catalog {
   padding: 94px 0 94px;
-  background: url("../img/bg-catalog-topic-desktop@1x.jpg") center no-repeat;
+  background: #a87b62 url("../img/bg-catalog-topic-desktop@1x.jpg") center no-repeat;
   background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: url("../img/bg-catalog-topic-desktop@2x.jpg") center no-repeat;
+    background: #a87b62 url("../img/bg-catalog-topic-desktop@2x.jpg") center no-repeat;
     background-size: cover;
   }
 }
@@ -61,26 +61,25 @@
   line-height: 29px;
 }
 
-
 @media (max-width: $tablet-width-only) {
   .topic {
     padding: 187px 18px 179px 0;
-    background: url("../img/bg-main-topic-tablet@1x.jpg") center no-repeat;
+    background: #a87b62 url("../img/bg-main-topic-tablet@1x.jpg") center no-repeat;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../img/bg-main-topic-tablet@2x.jpg") center no-repeat;
+      background: #a87b62 url("../img/bg-main-topic-tablet@2x.jpg") center no-repeat;
       background-size: cover;
     }
   }
 
   .topic--catalog {
     padding: 94px 0 94px;
-    background: url("../img/bg-catalog-topic-tablet@1x.jpg") center no-repeat;
+    background: #a87b62 url("../img/bg-catalog-topic-tablet@1x.jpg") center no-repeat;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../img/bg-catalog-topic-tablet@2x.jpg") center no-repeat;
+      background: #a87b62 url("../img/bg-catalog-topic-tablet@2x.jpg") center no-repeat;
       background-size: cover;
     }
   }
@@ -89,11 +88,11 @@
 @media (max-width: $mobile-width-only) {
   .topic {
     padding: 196px 0 189px 1px;
-    background: url("../img/bg-main-topic-mobile@1x.jpg") center no-repeat;
+    background: #a87b62 url("../img/bg-main-topic-mobile@1x.jpg") center no-repeat;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../img/bg-main-topic-mobile@2x.jpg") center no-repeat;
+      background: #a87b62 url("../img/bg-main-topic-mobile@2x.jpg") center no-repeat;
       background-size: cover;
     }
   }
@@ -110,11 +109,11 @@
 
   .topic--catalog {
     padding: 80px 0 79px;
-    background: url("../img/bg-catalog-topic-mobile@1x.jpg") center no-repeat;
+    background: #a87b62 url("../img/bg-catalog-topic-mobile@1x.jpg") center no-repeat;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../img/bg-catalog-topic-mobile@2x.jpg") center no-repeat;
+      background: #a87b62 url("../img/bg-catalog-topic-mobile@2x.jpg") center no-repeat;
       background-size: cover;
     }
   }
