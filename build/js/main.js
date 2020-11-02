@@ -57,21 +57,45 @@
     },
   });
 
-  // FAQ
+  // Обработчик клика для открытия/закрытия блока
 
-  var faq = document.querySelector('.faq');
-  var faqButtons = faq.querySelectorAll('.faq button');
-
-  faq.classList.remove('faq--nojs');
-
-  var addTabsClickToggle = function (button) {
+  var addTabsClickToggle = function (button, activeClass) {
     button.addEventListener('click', function () {
-      button.classList.toggle('faq__button--active');
+      button.classList.toggle(activeClass);
     });
   };
 
-  for (var i = 0; i < faqButtons.length; i++) {
-    addTabsClickToggle(faqButtons[i]);
+  // FAQ
+
+  var faq = document.querySelector('.faq');
+
+  if (faq) {
+    faq.classList.remove('faq--nojs');
+    var faqButtons = faq.querySelectorAll('.faq button');
+    for (var i = 0; i < faqButtons.length; i++) {
+      addTabsClickToggle(faqButtons[i], 'faq__button--active');
+    }
   }
+
+  // Фильтры
+
+  var filter = document.querySelector('.filters');
+
+  if (filter) {
+    filter.classList.remove('filters--nojs');
+    var fieldsets = filter.querySelectorAll('.filters__fieldset');
+    for (i = 0; i < fieldsets.length; i++) {
+      addTabsClickToggle(fieldsets[i], 'filters__fieldset--active');
+    }
+    var clearButton = filter.querySelector('.filters__clear-button');
+
+    clearButton.addEventListener('click', function () {
+      var checkboxs = filter.querySelectorAll('input[type=checkbox]');
+      for (i = 0; i < checkboxs.length; i++) {
+        checkboxs[i].checked = false;
+      }
+    });
+  }
+
 
 })();

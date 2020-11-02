@@ -1,0 +1,251 @@
+.filters {
+  min-width: 250px;
+}
+
+.filters__form > div {
+  border: 1px solid $background-color;
+}
+
+.filters__form > div:not(:last-of-type) {
+  border-bottom: none;
+}
+
+.filters__form > div:last-of-type {
+  margin: 0 0 35px;
+}
+
+.filters__fieldset {
+  position: relative;
+  margin: 0;
+  padding: 0 25px;
+  border: none;
+}
+
+.filters__fieldset legend {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 25px 0 20px;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $main_text-color;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.filters__fieldset legend::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 9px;
+  background-image: url("../img/icon-arrow_down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.filters__fieldset--active legend::after {
+  top: 43%;
+  transform: rotate(180deg);
+}
+
+.filters__fieldset label {
+  display: none;
+  position: relative;
+  margin: 0 9px 12px;
+  padding: 0 0 0 25px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $main_text-color;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.filters__fieldset div {
+  display: none;
+}
+
+.filters__fieldset--active label,
+.filters__fieldset--active div {
+  display: block;
+}
+
+.filters__fieldset label:first-of-type {
+  margin: 3px 9px 12px;
+}
+
+.filters__fieldset label:last-of-type {
+  margin: 0 9px 26px;
+}
+
+.filters__fieldset label::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  border: 1px solid $background-color;
+}
+
+.filters__fieldset input:checked + label::before {
+  background: $background-color;
+}
+
+.filters__fieldset input:focus + label::before,
+.filters__fieldset label:hover::before {
+  outline: 1px solid $background-color;
+}
+
+.filters--nojs label {
+  display: block;
+}
+
+.filters__form button[type="submit"] {
+  width: 100%;
+  margin: 0 0 30px;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 68px;
+  text-align: center;
+  color: white;
+  background-color: $background-color;
+  border: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.filters__clear-button {
+  position: relative;
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: $main_text-color;
+  background-color: transparent;
+  border: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.filters__clear-button::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: calc(50% - 33.5px);
+  width: 67px;
+  height: 1px;
+  background-color: $background-color;
+}
+
+.filters__range-slider {
+  width: 100%;
+}
+
+.filters__price-controls {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 17px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $main_text-color;
+}
+
+.filters__price-controls span {
+  margin-left: 18.69%;
+}
+
+.filters__price-controls span:last-of-type {
+  margin-left: 30.81%;
+}
+
+.filters__price-controls input {
+  max-width: 25px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.filters__scale {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  margin: 4px 0 14px;
+  background-color: #f0eae4;
+}
+
+.filters__bar {
+  position: absolute;
+  top: 0;
+  left: 22.73%;
+  width: 55.56%;
+  height: 1px;
+  background-color: $background-color;
+}
+
+.filters__range-slider-pin {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background-color: $background-color;
+  border-radius: 50%;
+}
+
+.filters__range-slider-pin--min {
+  left: 22.22%;
+}
+
+.filters__range-slider-pin--max {
+  left: 75.25%;
+}
