@@ -102,6 +102,10 @@
   display: block;
 }
 
+.faq--nojs p {
+  display: block;
+}
+
 @media (max-width: $tablet-width-only) {
   .faq {
     width: 100%;

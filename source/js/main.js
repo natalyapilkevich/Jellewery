@@ -23,7 +23,7 @@
 
   // слайдер New In
 
-  var newInSwiper = new Swiper('.new__swiper-container', {
+  var newInSwiper = new Swiper('.product-slider__swiper-container', { // eslint-disable-line
     spaceBetween: 0,
     slidesPerView: 4,
     slidesPerGroup: 4,
@@ -40,9 +40,9 @@
       },
       1252: {
         // when window width is >= 1252px
-          slidesPerView: 4,
-          slidesPerGroup: 4
-        }
+        slidesPerView: 4,
+        slidesPerGroup: 4
+      }
     },
     pagination: {
       el: '.swiper-pagination',
