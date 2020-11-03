@@ -1,6 +1,6 @@
 .topic {
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 121px;
   padding: 187px 0 179px 1px;
   box-sizing: border-box;
   background: #a87b62 url("../img/bg-main-topic-desktop@1x.jpg") center no-repeat;
@@ -63,6 +63,7 @@
 
 @media (max-width: $tablet-width-only) {
   .topic {
+    margin: 0 auto 71px;
     padding: 187px 18px 179px 0;
     background: #a87b62 url("../img/bg-main-topic-tablet@1x.jpg") center no-repeat;
     background-size: cover;

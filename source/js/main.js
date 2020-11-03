@@ -148,4 +148,31 @@
       closePopup();
     });
   }
+
+  // Карточка товара открытие/закрытие description и additional info
+
+  var card = document.querySelector('.card');
+  var cardLinks = card.querySelectorAll('.card__link');
+  var cardInfos = card.querySelectorAll('.card__info');
+
+  card.classList.remove('card--nojs');
+
+  var addTabsClickHandler = function (activeLink, activeText, link, text) {
+    link.addEventListener('click', function () {
+
+      var activeNavLink = document.querySelector('.' + activeLink);
+      var activeDescription = document.querySelector('.' + activeText);
+
+      activeNavLink.classList.remove(activeLink);
+      activeDescription.classList.remove(activeText);
+
+      link.classList.add(activeLink);
+      text.classList.add(activeText);
+    });
+  };
+
+  for (i = 0; i < cardLinks.length; i++) {
+    addTabsClickHandler('card__link--active', 'card__info--active', cardLinks[i], cardInfos[i]);
+  }
+
 })();
