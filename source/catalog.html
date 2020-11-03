@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+  <div class="overlay"></div>
   <header class="header header--nojs header--opened">
     <div class="header__top">
       <button type="button">
@@ -52,11 +53,12 @@
     <h1 class="visually-hidden">Каталог</h1>
     <section class="topic topic--catalog">
       <h2>all jewellery</h2>
-      <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
+      <p>Discover picks of fashion's finest<br class="br-mobile"> trends in our jewellery catalog</p>
     </section>
     <section class="catalog">
       <div class="catalog__wrapper">
         <div class="catalog__filters filters filters--nojs">
+          <button class="filters__open-button" type="button">Filter</button>
           <form class="filters__form" action="https://echo.htmlacademy.ru/" method="post">
             <div>
               <fieldset class="filters__fieldset filters__fieldset--active">
@@ -113,6 +115,7 @@
                 </div>
               </fieldset>
             </div>
+            <button class="filters__close-button" type="button"><span class="visually-hidden">Закрыть окно настройки фильтров</span></button>
             <button type="submit">Apply</button>
             <button class="filters__clear-button" type="button">Clear All</button>
           </form>

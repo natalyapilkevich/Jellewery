@@ -82,6 +82,9 @@
   var filter = document.querySelector('.filters');
 
   if (filter) {
+
+    // очистка чекбоксов по кнопке Clear All
+
     filter.classList.remove('filters--nojs');
     var fieldsets = filter.querySelectorAll('.filters__fieldset');
     for (i = 0; i < fieldsets.length; i++) {
@@ -95,7 +98,54 @@
         checkboxs[i].checked = false;
       }
     });
+
+    // открытие/закрытие фильтров на планшете и мобильной версии
+
+    var body = document.querySelector('body');
+    var background = document.querySelector('.overlay');
+
+    var openFilterButton = filter.querySelector('.filters__open-button');
+    var closeFilterButton = filter.querySelector('.filters__close-button');
+    var applyFiltersButton = filter.querySelector('.filters button[type=submit]');
+
+    var onPopupEscPress = function (evt) {
+      if (evt.key === 'Escape') {
+        evt.preventDefault();
+        closePopup();
+      }
+    };
+
+    var closePopup = function () {
+      filter.classList.remove('filters--active');
+      background.classList.remove('overlay--show');
+      body.classList.remove('overflow');
+      document.removeEventListener('keydown', onPopupEscPress);
+    };
+
+    var openPopup = function () {
+      filter.classList.add('filters--active');
+      background.classList.add('overlay--show');
+      body.classList.add('overflow');
+      document.addEventListener('keydown', onPopupEscPress);
+    };
+
+    openFilterButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      openPopup();
+    });
+
+    closeFilterButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      closePopup();
+    });
+
+    applyFiltersButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      closePopup();
+    });
+
+    background.addEventListener('click', function () {
+      closePopup();
+    });
   }
-
-
 })();

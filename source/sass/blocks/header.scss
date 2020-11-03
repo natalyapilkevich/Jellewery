@@ -144,6 +144,7 @@
 
 @media (max-width: $tablet-width-only) {
   .header__top {
+    position: relative;
     padding: 30px 5.86%;
     border-bottom: none;
   }
@@ -198,10 +199,10 @@
   .header--opened .header__search {
     position: absolute;
     top: 136px;
-    left: 5.86%;
+    left: 0;
     display: flex;
     align-items: center;
-    width: 88.28%;
+    width: 100%;
   }
 
   .header__search label {
@@ -291,7 +292,7 @@
   .header--opened .header__login {
     position: absolute;
     top: 677px;
-    left: 5.86%;
+    left: 0;
     display: block;
     margin: 0;
     padding: 5px 0;
@@ -366,8 +367,6 @@
 
   .header--opened .header__search {
     top: 102px;
-    left: 4.69%;
-    width: 90.625%;
   }
 
   .header--opened ul {
@@ -376,6 +375,5 @@
 
   .header__tools .header__login {
     top: 612px;
-    left: 4.69%;
   }
 }

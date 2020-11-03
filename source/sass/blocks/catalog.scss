@@ -83,4 +83,74 @@
 
 .catalog__paganation .catalog__paganation-number--active {
   color: $main_text-color;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    cursor: default;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+@media (max-width: $tablet-width-only) {
+  .catalog {
+    padding: 50px 0 69px;
+  }
+
+  .catalog__wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3.906%;
+  }
+
+  .catalog__filters {
+    margin: 0 auto 35px;
+  }
+
+  .catalog__product {
+    width: 206px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .catalog {
+    padding: 40px 0 60px;
+  }
+
+  .catalog__wrapper {
+    padding: 0;
+  }
+
+  .catalog__filters {
+    margin: 0 auto 25px;
+  }
+
+  .catalog__product-list ul {
+    margin: 0 0 26px;
+  }
+
+  .catalog__product {
+    width: 130px;
+    margin: 15px 15px 10px;
+  }
+
+  .catalog__paganation {
+    justify-content: center;
+  }
+
+  .catalog__paganation ol {
+    margin: 0;
+  }
+
+  .catalog__paganation a {
+    display: none;
+  }
+
+  .catalog__paganation .catalog__paganation-number {
+    display: block;
+    margin: 0 7px 0 6px;
+  }
 }
