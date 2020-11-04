@@ -33,6 +33,10 @@ a {
   background: #e5e5e5;
 }
 
+.overlay--cart.overlay--show {
+  background: rgba(29, 22, 19, 0.25);
+}
+
 .overflow {
   overflow: hidden;
 }
