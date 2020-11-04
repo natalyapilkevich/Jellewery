@@ -23,38 +23,69 @@
 
   // слайдер New In
 
-  var newInSwiper = new Swiper('.product-slider__swiper-container', { // eslint-disable-line
-    spaceBetween: 0,
-    slidesPerView: 4,
-    slidesPerGroup: 4,
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 2,
-        slidesPerGroup: 2
+  var createNewInSwiper = function () {
+    var newInSwiper = new Swiper('.product-slider__swiper-container', { // eslint-disable-line
+      spaceBetween: 0,
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+          },
+        },
+        // when window width is >= 768px
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+          },
+        },
+        1024: {
+        // when window width is >= 1024px
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+          },
+        },
+        1252: {
+          // when window width is >= 1252px
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+          },
+        }
       },
-      1024: {
-      // when window width is >= 1024px
-        slidesPerView: 3,
-        slidesPerGroup: 3
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
-      1252: {
-        // when window width is >= 1252px
-        slidesPerView: 4,
-        slidesPerGroup: 4
-      }
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + '</span>';
-      },
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+    });
+  };
+
+  createNewInSwiper();
+
+  window.addEventListener('resize', function () {
+    createNewInSwiper();
   });
 
   // Обработчик клика для открытия/закрытия блока
@@ -62,6 +93,16 @@
   var addTabsClickToggle = function (button, activeClass) {
     button.addEventListener('click', function () {
       button.classList.toggle(activeClass);
+    });
+  };
+
+  // Обработчик Enter для открытия/закрытия блока
+
+  var addTabsEnterToggle = function (item, activeClass) {
+    item.addEventListener('keydown', function (evt) {
+      if (evt.key === 'Enter') {
+        item.classList.toggle(activeClass);
+      }
     });
   };
 
@@ -82,16 +123,20 @@
   var filter = document.querySelector('.filters');
 
   if (filter) {
-
-    // очистка чекбоксов по кнопке Clear All
-
     filter.classList.remove('filters--nojs');
+
+    // открытие/скрытие fieldset
+
+
     var fieldsets = filter.querySelectorAll('.filters__fieldset');
     for (i = 0; i < fieldsets.length; i++) {
       addTabsClickToggle(fieldsets[i], 'filters__fieldset--active');
+      addTabsEnterToggle(fieldsets[i], 'filters__fieldset--active');
     }
-    var clearButton = filter.querySelector('.filters__clear-button');
 
+    // очистка чекбоксов по кнопке Clear All
+
+    var clearButton = filter.querySelector('.filters__clear-button');
     clearButton.addEventListener('click', function () {
       var checkboxs = filter.querySelectorAll('input[type=checkbox]');
       for (i = 0; i < checkboxs.length; i++) {
@@ -149,30 +194,74 @@
     });
   }
 
-  // Карточка товара открытие/закрытие description и additional info
+  // Карточка товара
 
   var card = document.querySelector('.card');
-  var cardLinks = card.querySelectorAll('.card__link');
-  var cardInfos = card.querySelectorAll('.card__info');
 
-  card.classList.remove('card--nojs');
+  if (card) {
 
-  var addTabsClickHandler = function (activeLink, activeText, link, text) {
-    link.addEventListener('click', function () {
+    // открытие/закрытие description и additional info
 
-      var activeNavLink = document.querySelector('.' + activeLink);
-      var activeDescription = document.querySelector('.' + activeText);
+    var cardLinks = card.querySelectorAll('.card__link');
+    var cardInfos = card.querySelectorAll('.card__info');
 
-      activeNavLink.classList.remove(activeLink);
-      activeDescription.classList.remove(activeText);
+    card.classList.remove('card--nojs');
 
-      link.classList.add(activeLink);
-      text.classList.add(activeText);
+    var addTabsClickHandler = function (activeLink, activeText, link, text) {
+      link.addEventListener('click', function () {
+
+        var activeNavLink = document.querySelector('.' + activeLink);
+        var activeDescription = document.querySelector('.' + activeText);
+
+        activeNavLink.classList.remove(activeLink);
+        activeDescription.classList.remove(activeText);
+
+        link.classList.add(activeLink);
+        text.classList.add(activeText);
+      });
+    };
+
+    for (i = 0; i < cardLinks.length; i++) {
+      addTabsClickHandler('card__link--active', 'card__info--active', cardLinks[i], cardInfos[i]);
+    }
+
+    // Слайдер на фотографиях
+
+    var cardSlider = document.querySelector('.card__swiper-container');
+
+    var cardSwiper;
+
+    var createCardSlider = function () {
+      if (window.innerWidth < 768 && cardSlider.dataset.mobile === 'false') {
+        var cardPagination = document.createElement('div');
+        cardPagination.className = 'swiper-pagination card__pagination';
+        var cardContainer = document.querySelector('.card__swiper-container');
+        cardContainer.append(cardPagination);
+
+        cardSwiper = new Swiper(cardSlider, { // eslint-disable-line
+          pagination: {
+            el: '.card__pagination',
+            type: 'fraction',
+          },
+        });
+
+        cardSlider.dataset.mobile = 'true';
+      }
+
+      if (window.innerWidth >= 768) {
+        cardSlider.dataset.mobile = 'false';
+        if (cardSlider.classList.contains('swiper-container-initialized')) {
+          cardSwiper.destroy();
+        }
+      }
+    };
+
+    createCardSlider();
+
+    window.addEventListener('resize', function () {
+      createCardSlider();
     });
-  };
-
-  for (i = 0; i < cardLinks.length; i++) {
-    addTabsClickHandler('card__link--active', 'card__info--active', cardLinks[i], cardInfos[i]);
   }
+
 
 })();

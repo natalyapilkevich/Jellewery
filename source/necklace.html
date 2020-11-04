@@ -62,7 +62,7 @@
               <img src="img/product-main_image-desktop@1x.jpg" srcset="img/product-main_image-desktop@2x.jpg 2x" alt="Gold necklace" width="470" height="435">
             </picture>
           </div>
-          <div class="card__swiper-container swiper-container">
+          <div class="card__swiper-container swiper-container" data-mobile="false">
             <div class="swiper-wrapper">
               <div class="card__item card__item--mobile-only swiper-slide">
                 <picture>
@@ -75,7 +75,7 @@
               <div class="card__item swiper-slide">
                 <picture>
                   <!-- 1х: 290px; 2x: 690px -->
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/product-for_women-mobile@1x.webp 1x, img/product-for_women-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/product-main_image-mobile@1x.webp 1x, img/product-main_image-mobile@2x.webp 2x">
                   <!-- 1х: 97px; 2x: 194px -->
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-for_women-tablet@1x.webp 1x, img/product-for_women-tablet@2x.webp 2x">
                   <!-- 1х: 100px; 2x: 200px -->
@@ -87,7 +87,7 @@
               <div class="card__item swiper-slide">
                 <picture>
                   <!-- 1х: 290px; 2x: 690px -->
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/product-common-mobile@1x.webp 1x, img/product-common-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/product-main_image-mobile@1x.webp 1x, img/product-main_image-mobile@2x.webp 2x">
                   <!-- 1х: 97px; 2x: 194px -->
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-common-tablet@1x.webp 1x, img/product-common-tablet@2x.webp 2x">
                   <!-- 1х: 100px; 2x: 200px -->
@@ -99,7 +99,7 @@
               <div class="card__item swiper-slide">
                 <picture>
                   <!-- 1х: 290px; 2x: 690px -->
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/product-women_set-mobile@1x.webp 1x, img/product-women_set-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/product-main_image-mobile@1x.webp 1x, img/product-main_image-mobile@2x.webp 2x">
                   <!-- 1х: 97px; 2x: 194px -->
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-women_set-tablet@1x.webp 1x, img/product-women_set-tablet@2x.webp 2x">
                   <!-- 1х: 100px; 2x: 200px -->
@@ -131,11 +131,12 @@
               <td>18” / 20”</td>
             </tr>
           </table>
-
           <button type="button" class="card__add-to-cart">Add to cart</button>
-          <span>14 Day Returns</span>
-          <span>2-Year Warranty</span>
-          <span>Free Shipping</span>
+          <ul class="card__advantages">
+            <li>14 Day Returns</li>
+            <li>2-Year Warranty</li>
+            <li>Free Shipping</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -147,7 +148,7 @@
           <div class="swiper-wrapper">
             <div class="product-slider__product product swiper-slide">
               <a href="#">
-                <h3>necklace with amethyst</h3>
+                <h3>Necklace with amethyst</h3>
                 <picture>
                   <!-- 1х: 130px; 2x: 260px -->
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/main-new-necklace-mobile@1x.webp 1x, img/main-new-necklace-mobile@2x.webp 2x">
@@ -156,7 +157,7 @@
                   <!-- 1х: 270px; 2x: 540px -->
                   <source type="image/webp" srcset="img/main-new-necklace-desktop@1x.webp 1x, img/main-new-necklace-desktop@2x.webp 2x">
                   <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/main-new-necklace-desktop@1x.jpg" srcset="img/main-new-necklace-desktop@2x.jpg 2x" alt="necklace with amethyst" width="270" height="284">
+                  <img src="img/main-new-necklace-desktop@1x.jpg" srcset="img/main-new-necklace-desktop@2x.jpg 2x" alt="Necklace with amethyst" width="270" height="284">
                 </picture>
                 <p>$ 145</p>
               </a>
@@ -211,7 +212,7 @@
             </div>
             <div class="product-slider__product product swiper-slide">
               <a href="#">
-                <h3>necklace with amethyst</h3>
+                <h3>Necklace with amethyst</h3>
                 <picture>
                   <!-- 1х: 130px; 2x: 260px -->
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/main-new-necklace-mobile@1x.webp 1x, img/main-new-necklace-mobile@2x.webp 2x">
@@ -220,14 +221,14 @@
                   <!-- 1х: 270px; 2x: 540px -->
                   <source type="image/webp" srcset="img/main-new-necklace-desktop@1x.webp 1x, img/main-new-necklace-desktop@2x.webp 2x">
                   <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/main-new-necklace-desktop@1x.jpg" srcset="img/main-new-necklace-desktop@2x.jpg 2x" alt="necklace with amethyst" width="270" height="284">
+                  <img src="img/main-new-necklace-desktop@1x.jpg" srcset="img/main-new-necklace-desktop@2x.jpg 2x" alt="Necklace with amethyst" width="270" height="284">
                 </picture>
                 <p>$ 145</p>
               </a>
             </div>
             <div class="product-slider__product product swiper-slide">
               <a href="#">
-                <h3>necklace with amethyst</h3>
+                <h3>Necklace with amethyst</h3>
                 <picture>
                   <!-- 1х: 130px; 2x: 260px -->
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/main-new-necklace-mobile@1x.webp 1x, img/main-new-necklace-mobile@2x.webp 2x">
@@ -236,14 +237,14 @@
                   <!-- 1х: 270px; 2x: 540px -->
                   <source type="image/webp" srcset="img/main-new-necklace-desktop@1x.webp 1x, img/main-new-necklace-desktop@2x.webp 2x">
                   <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/main-new-necklace-desktop@1x.jpg" srcset="img/main-new-necklace-desktop@2x.jpg 2x" alt="necklace with amethyst" width="270" height="284">
+                  <img src="img/main-new-necklace-desktop@1x.jpg" srcset="img/main-new-necklace-desktop@2x.jpg 2x" alt="Necklace with amethyst" width="270" height="284">
                 </picture>
                 <p>$ 145</p>
               </a>
             </div>
             <div class="product-slider__product product swiper-slide">
               <a href="#">
-                <h3>necklace with amethyst</h3>
+                <h3>Necklace with amethyst</h3>
                 <picture>
                   <!-- 1х: 130px; 2x: 260px -->
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/main-new-necklace-mobile@1x.webp 1x, img/main-new-necklace-mobile@2x.webp 2x">
@@ -252,14 +253,14 @@
                   <!-- 1х: 270px; 2x: 540px -->
                   <source type="image/webp" srcset="img/main-new-necklace-desktop@1x.webp 1x, img/main-new-necklace-desktop@2x.webp 2x">
                   <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/main-new-necklace-desktop@1x.jpg" srcset="img/main-new-necklace-desktop@2x.jpg 2x" alt="necklace with amethyst" width="270" height="284">
+                  <img src="img/main-new-necklace-desktop@1x.jpg" srcset="img/main-new-necklace-desktop@2x.jpg 2x" alt="Necklace with amethyst" width="270" height="284">
                 </picture>
                 <p>$ 145</p>
               </a>
             </div>
             <div class="product-slider__product product swiper-slide">
               <a href="#">
-                <h3>necklace with amethyst</h3>
+                <h3>Necklace with amethyst</h3>
                 <picture>
                   <!-- 1х: 130px; 2x: 260px -->
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/main-new-necklace-mobile@1x.webp 1x, img/main-new-necklace-mobile@2x.webp 2x">
@@ -268,7 +269,7 @@
                   <!-- 1х: 270px; 2x: 540px -->
                   <source type="image/webp" srcset="img/main-new-necklace-desktop@1x.webp 1x, img/main-new-necklace-desktop@2x.webp 2x">
                   <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/main-new-necklace-desktop@1x.jpg" srcset="img/main-new-necklace-desktop@2x.jpg 2x" alt="necklace with amethyst" width="270" height="284">
+                  <img src="img/main-new-necklace-desktop@1x.jpg" srcset="img/main-new-necklace-desktop@2x.jpg 2x" alt="Necklace with amethyst" width="270" height="284">
                 </picture>
                 <p>$ 145</p>
               </a>

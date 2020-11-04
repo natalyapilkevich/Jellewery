@@ -138,4 +138,16 @@
   .product-slider__link {
     margin: 0 auto 44px;
   }
+
+  .product-slider .swiper-button-prev,
+  .product-slider .swiper-button-next {
+    display: none;
+  }
+
+  .product-slider .swiper-pagination-fraction {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    letter-spacing: 0.15em;
+  }
 }

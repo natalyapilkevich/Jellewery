@@ -896,7 +896,15 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 767px) {
   .product-slider__link {
-    margin: 0 auto 44px; } }
+    margin: 0 auto 44px; }
+  .product-slider .swiper-button-prev,
+  .product-slider .swiper-button-next {
+    display: none; }
+  .product-slider .swiper-pagination-fraction {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    letter-spacing: 0.15em; } }
 
 .header {
   width: 100%;
@@ -1322,6 +1330,7 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 767px) {
   .topic {
+    margin: 0 auto 31px;
     padding: 196px 0 189px 1px;
     background: #a87b62 url("../img/bg-main-topic-mobile@1x.jpg") center no-repeat;
     background-size: cover; } }
@@ -1376,7 +1385,7 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 767px) {
   .new__product-slider {
-    padding: 61px 0 53px; } }
+    padding: 30px 0 53px; } }
 
 .blog {
   width: 100%;
@@ -1522,6 +1531,11 @@ button.swiper-pagination-bullet {
   line-height: 21px;
   text-align: center;
   color: #1d1613; }
+  .blog__article a:hover, .blog__article a:focus {
+    opacity: 0.8;
+    cursor: pointer; }
+  .blog__article a:active {
+    opacity: 0.5; }
 
 .blog__article a::after {
   content: "";
@@ -2601,17 +2615,32 @@ button.swiper-pagination-bullet {
   .card__add-to-cart:active {
     opacity: 0.5; }
 
-.card__description span {
-  margin-right: 26px;
+.card__advantages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.card__advantages li {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
-  color: #9b9997; }
+  color: #9b9997;
+  border-right: 1px solid #f6f5f4; }
 
-.card__description span:last-child {
-  margin-right: 0; }
+.card__advantages li:last-child {
+  border-right: none; }
+
+.card__pagination {
+  display: none; }
 
 @media (max-width: 1023px) {
   .card {
@@ -2659,10 +2688,73 @@ button.swiper-pagination-bullet {
     margin: 0 7px 7px 26px; }
   .card__add-to-cart {
     margin: 0 0 16px; }
-  .card__description span {
-    margin-right: 23px;
+  .card__advantages li {
     font-size: 12px;
     line-height: 16px; } }
+
+@media (max-width: 767px) {
+  .card {
+    padding: 0; }
+  .card__wrapper {
+    padding: 0; }
+  .card__gallery {
+    min-width: 290px;
+    width: 290px;
+    margin: 0 auto 40px; }
+  .card__item--desktop-tablet-only {
+    display: none; }
+  .card__item--mobile-only {
+    display: block; }
+  .card__swiper-container {
+    overflow: hidden; }
+  .card__swiper-container .card__item {
+    width: 100%;
+    height: 100%;
+    margin: 0; }
+  .card__swiper-container img {
+    width: 290px;
+    height: auto; }
+  .card__pagination {
+    display: block;
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #1d1613; }
+  .card__swiper-container .swiper-pagination-fraction {
+    bottom: 5px;
+    left: 0;
+    width: 100%; }
+  .card__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 320px;
+    margin: 0 auto 26px;
+    padding: 0 15px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .card__description h1 {
+    margin: 0 0 12px; }
+  .card__description p:first-of-type {
+    margin: 0 0 22px; }
+  .card__link {
+    margin: 0 0 15px;
+    padding: 5px 51px 5px 0; }
+  .card__info {
+    margin: 0 0 35px; }
+  .card__add-to-cart {
+    margin: 0 0 13px; }
+  .card__advantages li {
+    padding-right: 38px; }
+  .card__advantages li:first-child {
+    padding-right: 30px; }
+  .card__advantages li:last-child {
+    padding-right: 0; } }
 
 .additional {
   width: 100%;
@@ -2698,8 +2790,12 @@ button.swiper-pagination-bullet {
     margin: 0 auto 53px; } }
 
 @media (max-width: 767px) {
+  .additional {
+    margin: 0 auto 64px; }
   .additional__product-slider {
-    padding: 34px 0 53px; } }
+    padding: 30px 0 53px; }
+  .additional__product-slider .product-slider__link {
+    margin: 0 auto 43px; } }
 
 .footer {
   -webkit-box-flex: 0;
