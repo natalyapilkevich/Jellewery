@@ -1,14 +1,29 @@
 'use strict';
 
 (function () {
+
   // открытие/закрытие модального окна
+
+  var body = document.querySelector('body');
+  var background = document.querySelector('.overlay');
+
+  var onPopupEscPress = function (evt) {
+    if (evt.key === 'Escape') {
+      evt.preventDefault();
+      closePopup();
+    }
+  };
+
   var closePopup = function () {
+    var openModal = document.querySelector('.pop-up--show');
+    openModal.classList.remove('pop-up--show');
     background.classList.remove('overlay--show');
     body.classList.remove('overflow');
     document.removeEventListener('keydown', onPopupEscPress);
   };
 
-  var openPopup = function () {
+  var openPopup = function (modal) {
+    modal.classList.add('pop-up--show');
     background.classList.add('overlay--show');
     body.classList.add('overflow');
     document.addEventListener('keydown', onPopupEscPress);
@@ -31,6 +46,27 @@
       }
     });
   };
+
+  // открытие/закрытие окна Login
+
+  var openLoginButton = document.querySelector('.header__login');
+  var loginPopUp = document.querySelector('.pop-up-login');
+  var closeLoginButton = loginPopUp.querySelector('.pop-up-login__close-button');
+
+  openLoginButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    openPopup(loginPopUp);
+  });
+
+
+  closeLoginButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    closePopup();
+  });
+
+  background.addEventListener('click', function () {
+    closePopup();
+  });
 
   // открытие/закрытие меню в мобильной версии
 
@@ -157,41 +193,27 @@
 
     // открытие/закрытие фильтров на планшете и мобильной версии
 
-    var body = document.querySelector('body');
-    var background = document.querySelector('.overlay');
-
     var openFilterButton = filter.querySelector('.filters__open-button');
+    var filterPopUp = filter.querySelector('.filters__form');
     var closeFilterButton = filter.querySelector('.filters__close-button');
     var applyFiltersButton = filter.querySelector('.filters button[type=submit]');
 
-    var onPopupEscPress = function (evt) {
-      if (evt.key === 'Escape') {
-        evt.preventDefault();
-        filter.classList.remove('filters--active');
-        closePopup();
-      }
-    };
-
     openFilterButton.addEventListener('click', function (evt) {
       evt.preventDefault();
-      filter.classList.add('filters--active');
-      openPopup();
+      openPopup(filterPopUp);
     });
 
     closeFilterButton.addEventListener('click', function (evt) {
       evt.preventDefault();
-      filter.classList.remove('filters--active');
       closePopup();
     });
 
     applyFiltersButton.addEventListener('click', function (evt) {
       evt.preventDefault();
-      filter.classList.remove('filters--active');
       closePopup();
     });
 
     background.addEventListener('click', function () {
-      filter.classList.remove('filters--active');
       closePopup();
     });
   }
@@ -266,38 +288,34 @@
 
     // Открытие/скрытие модального окна добавления в корзину
 
-    body = document.querySelector('body');
-    background = document.querySelector('.overlay');
-
-    var cartPopUp = document.querySelector('.pop-up-add');
     var openCartButton = card.querySelector('.card__add-to-cart');
+    var cartPopUp = document.querySelector('.pop-up-add');
     var closeCartButton = cartPopUp.querySelector('.pop-up-add__close-button');
+    var backgroundCard = document.querySelector('.overlay-cart');
 
     onPopupEscPress = function (evt) {
       if (evt.key === 'Escape') {
         evt.preventDefault();
-        cartPopUp.classList.remove('pop-up-add--show');
         closePopup();
+        backgroundCard.classList.remove('overlay-cart--show');
       }
     };
 
     openCartButton.addEventListener('click', function (evt) {
       evt.preventDefault();
-      cartPopUp.classList.add('pop-up-add--show');
-      openPopup();
+      openPopup(cartPopUp);
+      backgroundCard.classList.add('overlay-cart--show');
     });
 
     closeCartButton.addEventListener('click', function (evt) {
       evt.preventDefault();
-      cartPopUp.classList.remove('pop-up-add--show');
       closePopup();
+      backgroundCard.classList.remove('overlay-cart--show');
     });
 
-    background.addEventListener('click', function () {
-      cartPopUp.classList.remove('pop-up-add--show');
+    backgroundCard.addEventListener('click', function () {
       closePopup();
+      backgroundCard.classList.remove('overlay-cart--show');
     });
   }
-
-
 })();

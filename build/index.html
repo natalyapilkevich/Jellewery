@@ -394,6 +394,22 @@
         </div>
       </div>
     </section>
+    <section class="pop-up pop-up-login">
+      <h2>Log In</h2>
+      <form action="https://echo.htmlacademy.ru/" metod="post">
+        <input id="usermail" type="email" name="usermail" placeholder="Your E-mail" required="">
+        <label for="usermail" class="visually-hidden">Your E-mail</label>
+        <input id="password" type="password" name="password" placeholder="Password" required="">
+        <label for="password" class="visually-hidden">Password</label>
+        <a href="#">Forgot your password?</a>
+        <button type="submit">Log In</button>
+        <div>
+          <span>Don’t have an account?</span>
+          <a href="#">Sign up</a>
+        </div>
+      </form>
+      <button class="pop-up-login__close-button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+    </section>
   </main>
   <footer class="footer">
     <div class="footer__wrapper">
@@ -402,8 +418,8 @@
           <h2>The good stuff<br class="br-mobile"> in your inbox</h2>
           <p>News and updates from CH.<br class="br-mobile"> No spam, we promise.</p>
           <form>
-            <label for="usermail"><span class="visually-hidden">Ваша почта</span></label>
-            <input id="usermail" type="email" name="usermail" placeholder="Your E-mail">
+            <label for="mail"><span class="visually-hidden">Ваша почта</span></label>
+            <input id="mail" type="email" name="mail" placeholder="Your E-mail">
           </form>
           <a href="#">
             <span>Sign Up</span>

@@ -1,0 +1,210 @@
+.pop-up-login {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: none;
+  width: 430px;
+  padding: 188px 45px 53px;
+  box-sizing: border-box;
+  background: #f0eae4 url("../img/bg-log_in-desktop@1x.jpg") center top no-repeat;
+  background-size: 100%;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: #f0eae4 url("../img/bg-log_in-desktop@1x.jpg") center top no-repeat;
+    background-size: 100%;
+  }
+  box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24);
+}
+
+.pop-up-login h2 {
+  margin: 0 0 26px;
+  padding: 0;
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 44px;
+  text-align: center;
+  color: $main_text-color;
+}
+
+.pop-up-login input {
+  width: 100%;
+  margin: 0 0 28px;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $main_text-color;
+}
+
+.pop-up-login input:last-of-type {
+  margin: 0 0 6px;
+}
+
+.pop-up-login input,
+.pop-up-login input::placeholder {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 36px;
+  color: $main_text-color;
+}
+
+.pop-up-login input::placeholder {
+  color: $service_text-color;
+}
+
+.pop-up-login a {
+  display: block;
+  margin: 0 0 44px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: right;
+  color: $service_text-color;
+}
+
+.pop-up-login a:last-child {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: $main_text-color;
+}
+
+.pop-up-login button[type="submit"] {
+  width: 100%;
+  margin: 0 0 16px;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 68px;
+  text-align: center;
+  color: white;
+  background-color: $background-color;
+  border: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.pop-up-login div {
+  display: flex;
+  justify-content: center;
+}
+
+.pop-up-login span {
+  display: block;
+  margin-right: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $service_text-color;
+}
+
+.pop-up-login__close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border: none;
+}
+
+.pop-up-login__close-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background-image: url("../img/icon-close_button.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(1);
+}
+
+@media (max-width: $tablet-width-only) {
+  .pop-up-login {
+    top: 80px;
+    width: 442px;
+    padding: 188px 51px 53px;
+    background: #f0eae4 url("../img/bg-log_in-tablet@1x.jpg") center top no-repeat;
+    background-size: 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: #f0eae4 url("../img/bg-log_in-tablet@1x.jpg") center top no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  .pop-up-login span {
+    margin-right: 5px;
+  }
+
+  .pop-up-login__close-button {
+    width: 20px;
+    height: 20px;
+  }
+
+  .pop-up-login__close-button::after {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .pop-up-login {
+    top: 50px;
+    width: 270px;
+    padding: 122px 15px 38px;
+    background: #f0eae4 url("../img/bg-log_in-mobile@1x.jpg") center top no-repeat;
+    background-size: 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: #f0eae4 url("../img/bg-log_in-mobile@1x.jpg") center top no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  .pop-up-login h2 {
+    margin: 0 0 19px;
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .pop-up-login input {
+    margin: 0 0 23px;
+  }
+
+  .pop-up-login a {
+    margin: 0 0 34px;
+  }
+
+  .pop-up-login__close-button {
+    top: 15px;
+    right: 15px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .pop-up-login__close-button::after {
+    width: 14px;
+    height: 14px;
+  }
+}

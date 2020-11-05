@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <div class="overlay overlay--cart"></div>
+  <div class="overlay-cart"></div>
+  <div class="overlay"></div>
   <header class="header header--nojs header--opened">
     <div class="header__top">
       <button type="button">
@@ -347,7 +348,23 @@
         </div>
       </div>
     </section>
-    <section class="pop-up-add">
+    <section class="pop-up pop-up-login">
+      <h2>Log In</h2>
+      <form action="https://echo.htmlacademy.ru/" metod="post">
+        <input id="usermail" type="email" name="usermail" placeholder="Your E-mail" required="">
+        <label for="usermail" class="visually-hidden">Your E-mail</label>
+        <input id="password" type="password" name="password" placeholder="Password" required="">
+        <label for="password" class="visually-hidden">Password</label>
+        <a href="#">Forgot your password?</a>
+        <button type="submit">Log In</button>
+        <div>
+          <span>Don’t have an account?</span>
+          <a href="#">Sign up</a>
+        </div>
+      </form>
+      <button class="pop-up-login__close-button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+    </section>
+    <section class="pop-up pop-up-add">
       <h2>The item was added<br class="br-mobile"> to your cart</h2>
       <div class="pop-up-add__product">
         <picture>
@@ -388,8 +405,8 @@
           <h2>The good stuff<br class="br-mobile"> in your inbox</h2>
           <p>News and updates from CH.<br class="br-mobile"> No spam, we promise.</p>
           <form>
-            <label for="usermail"><span class="visually-hidden">Ваша почта</span></label>
-            <input id="usermail" type="email" name="usermail" placeholder="Your E-mail">
+            <label for="mail"><span class="visually-hidden">Ваша почта</span></label>
+            <input id="mail" type="email" name="mail" placeholder="Your E-mail">
           </form>
           <a href="#">
             <span>Sign Up</span>
