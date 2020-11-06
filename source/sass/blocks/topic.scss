@@ -3,11 +3,11 @@
   margin: 0 auto 121px;
   padding: 187px 0 179px 1px;
   box-sizing: border-box;
-  background: #a87b62 url("../img/bg-main-topic-desktop@1x.jpg") center no-repeat;
+  background: $background-color url("../img/bg-main-topic-desktop@1x.jpg") center no-repeat;
   background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: #a87b62 url("../img/bg-main-topic-desktop@2x.jpg") center no-repeat;
+    background: $background-color url("../img/bg-main-topic-desktop@2x.jpg") center no-repeat;
     background-size: cover;
   }
 }
@@ -41,11 +41,11 @@
 .topic--catalog {
   margin: 0 auto;
   padding: 94px 0 94px;
-  background: #a87b62 url("../img/bg-catalog-topic-desktop@1x.jpg") center no-repeat;
+  background: $background-color url("../img/bg-catalog-topic-desktop@1x.jpg") center no-repeat;
   background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: #a87b62 url("../img/bg-catalog-topic-desktop@2x.jpg") center no-repeat;
+    background: $background-color url("../img/bg-catalog-topic-desktop@2x.jpg") center no-repeat;
     background-size: cover;
   }
 }
@@ -66,22 +66,23 @@
   .topic {
     margin: 0 auto 71px;
     padding: 187px 18px 179px 0;
-    background: #a87b62 url("../img/bg-main-topic-tablet@1x.jpg") center no-repeat;
+    background: $background-color url("../img/bg-main-topic-tablet@1x.jpg") center no-repeat;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: #a87b62 url("../img/bg-main-topic-tablet@2x.jpg") center no-repeat;
+      background: $background-color url("../img/bg-main-topic-tablet@2x.jpg") center no-repeat;
       background-size: cover;
     }
   }
 
   .topic--catalog {
+    margin: 0 auto;
     padding: 94px 0 94px;
-    background: #a87b62 url("../img/bg-catalog-topic-tablet@1x.jpg") center no-repeat;
+    background: $background-color url("../img/bg-catalog-topic-tablet@1x.jpg") center no-repeat;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: #a87b62 url("../img/bg-catalog-topic-tablet@2x.jpg") center no-repeat;
+      background: $background-color url("../img/bg-catalog-topic-tablet@2x.jpg") center no-repeat;
       background-size: cover;
     }
   }
@@ -91,11 +92,11 @@
   .topic {
     margin: 0 auto 31px;
     padding: 196px 0 189px 1px;
-    background: #a87b62 url("../img/bg-main-topic-mobile@1x.jpg") center no-repeat;
+    background: $background-color url("../img/bg-main-topic-mobile@1x.jpg") center no-repeat;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: #a87b62 url("../img/bg-main-topic-mobile@2x.jpg") center no-repeat;
+      background: $background-color url("../img/bg-main-topic-mobile@2x.jpg") center no-repeat;
       background-size: cover;
     }
   }
@@ -111,12 +112,13 @@
   }
 
   .topic--catalog {
+    margin: 0 auto;
     padding: 80px 0 79px;
-    background: #a87b62 url("../img/bg-catalog-topic-mobile@1x.jpg") center no-repeat;
+    background: $background-color url("../img/bg-catalog-topic-mobile@1x.jpg") center no-repeat;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: #a87b62 url("../img/bg-catalog-topic-mobile@2x.jpg") center no-repeat;
+      background: $background-color url("../img/bg-catalog-topic-mobile@2x.jpg") center no-repeat;
       background-size: cover;
     }
   }

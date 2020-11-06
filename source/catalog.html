@@ -36,7 +36,7 @@
     </div>
     <nav class="header__nav">
       <ul class="header__main-menu header__main-menu--catalog">
-        <li><a>What’s new</a></li>
+        <li><a href="index.html">What’s new</a></li>
         <li><a href="#">Chokers</a></li>
         <li><a href="necklace.html">Necklaces</a></li>
         <li><a href="#">Rings</a></li>
@@ -60,64 +60,66 @@
         <div class="catalog__filters filters filters--nojs">
           <button class="filters__open-button" type="button">Filter</button>
           <form class="filters__form pop-up" action="https://echo.htmlacademy.ru/" method="post">
-            <div>
-              <fieldset class="filters__fieldset filters__fieldset--active" tabindex="0">
-                <legend>Product</legend>
-                <input class="visually-hidden" id="necklaces" type="checkbox" name="necklaces" checked>
-                <label for="necklaces">Necklaces</label>
-                <input class="visually-hidden" id="chokers" type="checkbox" name="chokers" checked>
-                <label for="chokers">Chokers</label>
-                <input class="visually-hidden" id="rings" type="checkbox" name="rings">
-                <label for="rings">Rings</label>
-                <input class="visually-hidden" id="earrings" type="checkbox" name="earrings" checked>
-                <label for="earrings">Earrings</label>
-              </fieldset>
-            </div>
-            <div>
-              <fieldset class="filters__fieldset" tabindex="0">
-                <legend>Material</legend>
-                <input class="visually-hidden" id="gold" type="checkbox" name="gold">
-                <label for="gold">Gold</label>
-                <input class="visually-hidden" id="leather" type="checkbox" name="leather">
-                <label for="leather">Leather</label>
-                <input class="visually-hidden" id="gemstone" type="checkbox" name="gemstone">
-                <label for="gemstone">Gemstone</label>
-              </fieldset>
-            </div>
-            <div>
-              <fieldset class="filters__fieldset" tabindex="0">
-                <legend>Collection</legend>
-                <input class="visually-hidden" id="2020" type="checkbox" name="2020">
-                <label for="2020">New 2020</label>
-                <input class="visually-hidden" id="luxury" type="checkbox" name="luxury">
-                <label for="luxury">Luxury</label>
-                <input class="visually-hidden" id="romantic" type="checkbox" name="romantic">
-                <label for="romantic">Romantic</label>
-                <input class="visually-hidden" id="casual" type="checkbox" name="casual">
-                <label for="casual">Casual</label>
-              </fieldset>
-            </div>
-            <div>
-              <fieldset class="filters__fieldset filters__fieldset--active" tabindex="0">
-                <legend>Price</legend>
-                <div class="filters__range-slider">
-                  <div class="filters__scale">
-                    <div class="filters__bar"></div>
-                    <div class="filters__range-slider-pin filters__range-slider-pin--min"></div>
-                    <div class="filters__range-slider-pin filters__range-slider-pin--max"></div>
+            <div class="filters__wrapper">
+              <div>
+                <fieldset class="filters__fieldset filters__fieldset--active" tabindex="0">
+                  <legend>Product</legend>
+                  <input class="visually-hidden" id="necklaces" type="checkbox" name="necklaces" checked>
+                  <label for="necklaces">Necklaces</label>
+                  <input class="visually-hidden" id="chokers" type="checkbox" name="chokers" checked>
+                  <label for="chokers">Chokers</label>
+                  <input class="visually-hidden" id="rings" type="checkbox" name="rings">
+                  <label for="rings">Rings</label>
+                  <input class="visually-hidden" id="earrings" type="checkbox" name="earrings" checked>
+                  <label for="earrings">Earrings</label>
+                </fieldset>
+              </div>
+              <div>
+                <fieldset class="filters__fieldset" tabindex="0">
+                  <legend>Material</legend>
+                  <input class="visually-hidden" id="gold" type="checkbox" name="gold">
+                  <label for="gold">Gold</label>
+                  <input class="visually-hidden" id="leather" type="checkbox" name="leather">
+                  <label for="leather">Leather</label>
+                  <input class="visually-hidden" id="gemstone" type="checkbox" name="gemstone">
+                  <label for="gemstone">Gemstone</label>
+                </fieldset>
+              </div>
+              <div>
+                <fieldset class="filters__fieldset" tabindex="0">
+                  <legend>Collection</legend>
+                  <input class="visually-hidden" id="2020" type="checkbox" name="2020">
+                  <label for="2020">New 2020</label>
+                  <input class="visually-hidden" id="luxury" type="checkbox" name="luxury">
+                  <label for="luxury">Luxury</label>
+                  <input class="visually-hidden" id="romantic" type="checkbox" name="romantic">
+                  <label for="romantic">Romantic</label>
+                  <input class="visually-hidden" id="casual" type="checkbox" name="casual">
+                  <label for="casual">Casual</label>
+                </fieldset>
+              </div>
+              <div>
+                <fieldset class="filters__fieldset filters__fieldset--active" tabindex="0">
+                  <legend>Price</legend>
+                  <div class="filters__range-slider">
+                    <div class="filters__scale">
+                      <div class="filters__bar"></div>
+                      <div class="filters__range-slider-pin filters__range-slider-pin--min"></div>
+                      <div class="filters__range-slider-pin filters__range-slider-pin--max"></div>
+                    </div>
+                    <div class="filters__price-controls">
+                      <span> $ </span>
+                      <input type="number" name="min" value="55">
+                      <span> $ </span>
+                      <input type="number" name="max" value="155">
+                    </div>
                   </div>
-                  <div class="filters__price-controls">
-                    <span> $ </span>
-                    <input type="text" name="min" value="55">
-                    <span> $ </span>
-                    <input type="text" name="max" value="155">
-                  </div>
-                </div>
-              </fieldset>
+                </fieldset>
+              </div>
+              <button class="filters__close-button" type="button"><span class="visually-hidden">Закрыть окно настройки фильтров</span></button>
+              <button type="submit">Apply</button>
+              <button class="filters__clear-button" type="button">Clear All</button>
             </div>
-            <button class="filters__close-button" type="button"><span class="visually-hidden">Закрыть окно настройки фильтров</span></button>
-            <button type="submit">Apply</button>
-            <button class="filters__clear-button" type="button">Clear All</button>
           </form>
         </div>
         <div class="catalog__product-list">
@@ -331,7 +333,7 @@
     </section>
     <section class="pop-up pop-up-login">
       <h2>Log In</h2>
-      <form action="https://echo.htmlacademy.ru/" metod="post">
+      <form action="https://echo.htmlacademy.ru/" method="post">
         <input id="usermail" type="email" name="usermail" placeholder="Your E-mail" required>
         <label for="usermail" class="visually-hidden">Your E-mail</label>
         <input id="password" type="password" name="password" placeholder="Password" required>
@@ -354,7 +356,7 @@
           <p>News and updates from CH.<br class="br-mobile"> No spam, we promise.</p>
           <form>
             <label for="mail"><span class="visually-hidden">Ваша почта</span></label>
-            <input id="mail" type="email" name="mail" placeholder="Your E-mail">
+            <input id="mail" type="email" name="mail" placeholder="Your E-mail" required>
           </form>
           <a href="#">
             <span>Sign Up</span>

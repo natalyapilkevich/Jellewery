@@ -15,8 +15,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  padding: 90px 7.16% 77px 7.17%;
+  align-items: flex-start;
+  padding: 91px 7.16% 75px 7.17%;
   box-sizing: border-box;
 }
 
@@ -30,14 +30,14 @@
 }
 
 .footer__mail-form h2 {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   padding: 0;
   font-family: "Cormorant Garamond", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 34px;
   line-height: 44px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.024em;
   color: white;
 }
 
@@ -123,7 +123,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: 0 0 0 85px;
+  margin: 0 0 0 87px;
   padding: 0;
   list-style: none;
 }
@@ -136,6 +136,7 @@
   display: block;
   margin: 0 0 11px;
   padding: 5px 0;
+  font-family: "Poppins", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -169,7 +170,15 @@
 
   .footer__mail-form form {
     margin: 0;
-    padding: 0 0 40px;
+    padding: 0 0 42px;
+  }
+
+  .footer__mail-form h2 {
+    margin: 0 0 10px;
+  }
+
+  .footer__mail-form p {
+    margin: 0 0 36px;
   }
 
   .footer__mail-form a {
@@ -182,7 +191,7 @@
   }
 
   .footer__menu ul {
-    margin: 0 0 0 86px;
+    margin: 0 0 0 88px;
   }
 
   .footer__social svg {

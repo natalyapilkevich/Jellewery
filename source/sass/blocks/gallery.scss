@@ -9,12 +9,16 @@
 .gallery h2 {
   margin: 0 0 17px;
   padding: 0;
+  text-align: center;
+  color: $main_text-color;
+}
+
+.gallery span {
   font-family: "Cormorant Garamond", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 34px;
   line-height: 44px;
-  text-align: center;
   letter-spacing: 0.03em;
   color: $main_text-color;
 }
@@ -36,6 +40,16 @@
   line-height: 21px;
   text-align: center;
   color: $main_text-color;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .gallery__link::after {

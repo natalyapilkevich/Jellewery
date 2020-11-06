@@ -37,7 +37,7 @@
     </div>
     <nav class="header__nav">
       <ul class="header__main-menu header__main-menu--catalog">
-        <li><a href="catalog.html">What’s new</a></li>
+        <li><a href="index.html">What’s new</a></li>
         <li><a href="#">Chokers</a></li>
         <li><a>Necklaces</a></li>
         <li><a href="#">Rings</a></li>
@@ -116,24 +116,28 @@
         <div class="card__description">
           <h1>Gold Necklace</h1>
           <p>$ 115</p>
-          <button type="button" class="card__link">Description</button>
-          <button type="button" class="card__link card__link--active">Additional info</button>
-          <p class="card__info">A necklace is jewelry you wear around your neck. You might decide your sparkly necklace is a bit dressy for your cousin's baseball game — but perfect for a fancy dinner out.</p>
-          <table class="card__info card__info--active">
-            <tr>
-              <td>Metal type</td>
-              <td>Gold 585</td>
-            </tr>
-            <tr>
-              <td>Stone</td>
-              <td>Turquoise</td>
-            </tr>
-            <tr>
-              <td>Size</td>
-              <td>18” / 20”</td>
-            </tr>
-          </table>
-          <button type="button" class="card__add-to-cart">Add to cart</button>
+          <button class="card__link" type="button">Description</button>
+          <button class="card__link card__link--active" type="button">Additional info</button>
+          <div class="card__info">
+            <p>A necklace is jewelry you wear around your neck. You might decide your sparkly necklace is a bit dressy for your cousin's baseball game — but perfect for a fancy dinner out.</p>
+          </div>
+          <div class="card__info card__info--active">
+            <table>
+              <tr>
+                <td>Metal type</td>
+                <td>Gold 585</td>
+              </tr>
+              <tr>
+                <td>Stone</td>
+                <td>Turquoise</td>
+              </tr>
+              <tr>
+                <td>Size</td>
+                <td>18” / 20”</td>
+              </tr>
+            </table>
+          </div>
+          <a class="card__add-to-cart" href="#">Add to cart</a>
           <ul class="card__advantages">
             <li>14 Day Returns</li>
             <li>2-Year Warranty</li>
@@ -350,7 +354,7 @@
     </section>
     <section class="pop-up pop-up-login">
       <h2>Log In</h2>
-      <form action="https://echo.htmlacademy.ru/" metod="post">
+      <form action="https://echo.htmlacademy.ru/" method="post">
         <input id="usermail" type="email" name="usermail" placeholder="Your E-mail" required="">
         <label for="usermail" class="visually-hidden">Your E-mail</label>
         <input id="password" type="password" name="password" placeholder="Password" required="">
@@ -406,7 +410,7 @@
           <p>News and updates from CH.<br class="br-mobile"> No spam, we promise.</p>
           <form>
             <label for="mail"><span class="visually-hidden">Ваша почта</span></label>
-            <input id="mail" type="email" name="mail" placeholder="Your E-mail">
+            <input id="mail" type="email" name="mail" placeholder="Your E-mail" required="">
           </form>
           <a href="#">
             <span>Sign Up</span>

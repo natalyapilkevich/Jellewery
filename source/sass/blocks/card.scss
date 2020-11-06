@@ -9,9 +9,16 @@
 .card__wrapper {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0 6.076%;
+}
+
+@media (max-width: 1243px) {
+  .card__wrapper {
+    justify-content: center;
+  }
 }
 
 .card__gallery {
@@ -63,7 +70,7 @@
   color: $main_text-color;
 }
 
-.card__description p:first-of-type {
+.card__description > p {
   width: 100%;
   margin: 0 0 32px;
   padding: 0;
@@ -76,7 +83,8 @@
 
 .card__link {
   margin: 0 0 14px;
-  padding: 5px 48px 5px 0;
+  padding: 5px 35px 5px 0;
+  font-family: "Poppins", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -84,6 +92,16 @@
   color: $service_text-color;
   background-color: transparent;
   border: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .card__link--active {
@@ -103,10 +121,10 @@
 }
 
 .card__info--active {
-  display: table;
+  display: block;
 }
 
-.card__description tbody {
+.card__info--active table {
   width: 100%;
 }
 
@@ -131,7 +149,6 @@
   text-align: center;
   color: white;
   background-color: $background-color;
-  border: none;
 
   &:hover,
   &:focus {
@@ -204,6 +221,7 @@
   }
 
   .card__swiper-container .swiper-wrapper {
+    flex-wrap: wrap;
     flex-direction: row;
   }
 
@@ -259,6 +277,10 @@
     overflow: hidden;
   }
 
+  .card__swiper-container .swiper-wrapper {
+    flex-wrap: nowrap;
+  }
+
   .card__swiper-container .card__item {
     width: 100%;
     height: 100%;
@@ -300,17 +322,17 @@
     margin: 0 0 12px;
   }
 
-  .card__description p:first-of-type {
+  .card__description > p {
     margin: 0 0 22px;
   }
 
   .card__link {
-    margin: 0 0 15px;
-    padding: 5px 51px 5px 0;
+    margin: 0 0 14px;
+    padding: 5px 38px 5px 0;
   }
 
   .card__info {
-    margin: 0 0 35px;
+    margin: 0 0 36px;
   }
 
   .card__add-to-cart {

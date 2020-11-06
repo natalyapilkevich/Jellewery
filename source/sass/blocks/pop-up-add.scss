@@ -1,15 +1,17 @@
 .pop-up-add {
   position: fixed;
-  top: 42.2%;
+  top: 42.6%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
   display: none;
   width: 500px;
+  max-height: 57%;
   padding: 47px 0 25px;
   box-sizing: border-box;
   background: #ffffff;
   box-shadow: 0 4px 32px rgba(121, 121, 121, 0.24);
+  overflow-y: auto;
 }
 
 .pop-up-add h2 {
@@ -186,6 +188,17 @@
   height: 14px;
   background-color: transparent;
   border: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    cursor: pointer;
+    background-color: $background-color;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .pop-up-add__close-button::after {
@@ -203,8 +216,11 @@
 
 @media (max-width: $tablet-width-only) {
   .pop-up-add {
-    top: 29.3%;
+    top: 29.6%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 502px;
+    max-height: 70%;
   }
 
   .pop-up-add__product {
@@ -239,14 +255,17 @@
 
 @media (max-width: $mobile-width-only) {
   .pop-up-add {
-    top: 13.3%;
+    top: 13.4%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 90.625%;
     max-width: 500px;
+    max-height: 85%;
     padding: 39px 0 25px;
   }
 
   .pop-up-add h2 {
-    margin: 0 0 28px;
+    margin: 0 0 28px 3px;
     font-size: 24px;
     line-height: 29px;
   }

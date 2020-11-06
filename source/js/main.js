@@ -52,10 +52,29 @@
   var openLoginButton = document.querySelector('.header__login');
   var loginPopUp = document.querySelector('.pop-up-login');
   var closeLoginButton = loginPopUp.querySelector('.pop-up-login__close-button');
+  var loginEmail = loginPopUp.querySelector('[name=usermail]');
+  var loginSubmitButton = loginPopUp.querySelector('[type=submit]');
+
+  localStorage.email = '';
+
+  var isStorageSupport = true;
+  var storage = '';
+
+  try {
+    storage = localStorage.getItem('loginEmail');
+  } catch (err) {
+    isStorageSupport = false;
+  }
 
   openLoginButton.addEventListener('click', function (evt) {
     evt.preventDefault();
     openPopup(loginPopUp);
+
+    if (storage) {
+      loginEmail.value = localStorage.name;
+    }
+
+    loginEmail.focus();
   });
 
 
@@ -66,6 +85,12 @@
 
   background.addEventListener('click', function () {
     closePopup();
+  });
+
+  loginSubmitButton.addEventListener('click', function () {
+    if (isStorageSupport) {
+      localStorage.setItem('email', loginEmail.value);
+    }
   });
 
   // открытие/закрытие меню в мобильной версии
@@ -112,7 +137,7 @@
             el: '.swiper-pagination',
             clickable: true,
             renderBullet: function (index, className) {
-              return '<span class="' + className + '">' + (index + 1) + '</span>';
+              return '<span class=' + className + '>' + (index + 1) + '</span>';
             },
           },
         },
@@ -124,7 +149,7 @@
             el: '.swiper-pagination',
             clickable: true,
             renderBullet: function (index, className) {
-              return '<span class="' + className + '">' + (index + 1) + '</span>';
+              return '<span class=' + className + '>' + (index + 1) + '</span>';
             },
           },
         },
@@ -136,7 +161,7 @@
             el: '.swiper-pagination',
             clickable: true,
             renderBullet: function (index, className) {
-              return '<span class="' + className + '">' + (index + 1) + '</span>';
+              return '<span class=' + className + '>' + (index + 1) + '</span>';
             },
           },
         }

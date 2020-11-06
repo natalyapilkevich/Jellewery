@@ -30,6 +30,16 @@
   line-height: 21px;
   text-align: center;
   color: $main_text-color;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .blog__link::after {
@@ -46,6 +56,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: flex-start;
   padding: 0 6.076%;
 }
 
@@ -263,14 +274,14 @@
     align-items: flex-end;
     min-height: 512px;
     margin: 0 0 40px;
-    background: #f0eae4 url("../img/main-power_of_crystals-mobile@1x.jpg") no-repeat;
+    background: #f0eae4 url("../img/main-power_of_crystals-mobile@1x.jpg") center no-repeat;
     background-size: 100%;
     background-position: center top;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: #f0eae4 url("../img/main-power_of_crystals-mobile@2x.jpg") no-repeat;
+      background: #f0eae4 url("../img/main-power_of_crystals-mobile@2x.jpg") center no-repeat;
       background-size: 100%;
-      background-position: right center;
+      background-position: center top;
     }
   }
 
