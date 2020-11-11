@@ -7,27 +7,29 @@
   display: none;
 }
 
-.filters__wrapper > div {
+.filters__fieldset-wrapper {
   border: 1px solid $background-color;
 }
 
-.filters__wrapper > div:not(:last-of-type) {
+.filters__fieldset-wrapper:not(:last-of-type) {
   border-bottom: none;
 }
 
-.filters__wrapper > div:last-of-type {
+.filters__fieldset-wrapper:last-of-type {
   margin: 0 0 35px;
 }
 
 .filters__fieldset {
   position: relative;
   margin: 0;
-  padding: 0 25px;
+  padding: 0 24px;
   border: none;
 }
 
 .filters__fieldset legend {
   position: relative;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   margin: 0;
   padding: 25px 0 20px;
@@ -49,21 +51,12 @@
   }
 }
 
-.filters__fieldset legend::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 9px;
-  background-image: url("../img/icon-arrow_down.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
+.filters__fieldset svg {
+  padding: 4px 0;
+  fill: transparent;
 }
 
-.filters__fieldset--active legend::after {
-  top: 43%;
+.filters__fieldset--active svg {
   transform: rotate(180deg);
 }
 
@@ -89,8 +82,9 @@
   }
 }
 
-.filters__fieldset div {
+.filters__range-slider {
   display: none;
+  width: 100%;
 }
 
 .filters__fieldset--active label,
@@ -187,10 +181,6 @@
   width: 67px;
   height: 1px;
   background-color: $background-color;
-}
-
-.filters__range-slider {
-  width: 100%;
 }
 
 .filters__price-controls {
@@ -300,6 +290,7 @@
   }
 
   .filters__wrapper {
+    padding: 0 0 40px;
     background: #ffffff;
     box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
   }
@@ -327,34 +318,21 @@
     }
   }
 
-  .filters__close-button::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(-65%, -50%);
-    width: 14px;
-    height: 14px;
-    background-image: url("../img/icon-close_button.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-
-  .filters__wrapper > div {
+  .filters__fieldset-wrapper {
     border: none;
   }
 
-  .filters__wrapper > div:not(:last-of-type),
-  .filters__wrapper > div:last-of-type {
+  .filters__fieldset-wrapper:not(:last-of-type),
+  .filters__fieldset-wrapper:last-of-type {
     border-bottom: 1px solid $background-color;
   }
 
-  .filters__wrapper > div:last-of-type {
+  .filters__fieldset-wrapper:last-of-type {
     margin: 0 0 41px;
   }
 
   .filters__fieldset {
-    padding: 0 41px 0 40px;
+    padding: 0 40px;
   }
 
   .filters__fieldset legend {
@@ -363,10 +341,9 @@
     line-height: 23px;
   }
 
-  .filters__fieldset legend::after {
-    right: -3px;
-    width: 26px;
-    height: 15px;
+  .filters__fieldset svg {
+    width: 24px;
+    height: 14px;
   }
 
   .filters__fieldset label {
@@ -494,12 +471,16 @@
     padding: 20px 10px;
   }
 
+  .filters__wrapper {
+    padding: 0 0 30px;
+  }
+
   .filters__close-button {
-    top: 20px;
+    top: 21px;
     right: 16px;
   }
 
-  .filters__wrapper > div:last-of-type {
+  .filters__fieldset-wrapper:last-of-type {
     margin: 0 0 30px;
   }
 
@@ -511,10 +492,9 @@
     padding: 26px 0 22px;
   }
 
-  .filters__fieldset legend::after {
-    right: -2px;
-    width: 24px;
-    height: 14px;
+  .filters__fieldset svg {
+    width: 21px;
+    height: 11px;
   }
 
   .filters__fieldset label:first-of-type {
@@ -523,10 +503,6 @@
 
   .filters__fieldset label:last-of-type {
     margin: 0 10px 26px;
-  }
-
-  .filters__fieldset--active legend::after {
-    top: 41%;
   }
 
   .filters__form button[type="submit"] {

@@ -13,7 +13,7 @@
   color: $main_text-color;
 }
 
-.gallery span {
+.gallery__title {
   font-family: "Cormorant Garamond", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -23,7 +23,7 @@
   color: $main_text-color;
 }
 
-.gallery span:first-child {
+.gallery__title--big {
   font-size: 42px;
   line-height: 55px;
   color: black;

@@ -31,7 +31,7 @@
   flex-wrap: wrap;
   width: 100%;
   margin: 0 0 17px;
-  padding: 0 33px 36px 35px;
+  padding: 0 27px 36px 35px;
   box-sizing: border-box;
   border-bottom: 1px solid #f6f5f4;
 }
@@ -72,10 +72,9 @@
   justify-content: space-between;
 }
 
-.pop-up-add__quantity button {
+.pop-up-add__quantity-button {
   position: relative;
-  width: 14px;
-  height: 14px;
+  margin: 0 0 8px;
   background-color: transparent;
   border: none;
 
@@ -88,26 +87,6 @@
   &:active {
     opacity: 0.5;
   }
-}
-
-.pop-up-add__quantity button:last-child {
-  margin-bottom: 6px;
-}
-
-.pop-up-add__quantity button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 14px;
-  height: 14px;
-  background-image: url("../img/icon-plus.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.pop-up-add__quantity button:last-child::before {
-  background-image: url("../img/icon-minus.svg");
 }
 
 .pop-up-add__quantity p {
@@ -129,7 +108,7 @@
   padding: 0 35px;
 }
 
-.pop-up-add__info span {
+.pop-up-add__info-text {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -137,7 +116,7 @@
   color: $main_text-color;
 }
 
-.pop-up-add__info span:last-child {
+.pop-up-add__info-text--bold {
   font-weight: 500;
 }
 
@@ -148,16 +127,16 @@
   padding: 0 35px;
 }
 
-.pop-up-add__buttons a {
+.pop-up-add__button {
   display: block;
   width: 200px;
   margin: 0 0 30px;
-  padding: 0;
+  padding: 24px 0 21px;
   box-sizing: border-box;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 66px;
+  line-height: 21px;
   text-align: center;
   color: white;
   background-color: $background-color;
@@ -173,7 +152,7 @@
   }
 }
 
-.pop-up-add__buttons a:first-child {
+.pop-up-add__button--hollow {
   color: $main_text-color;
   background-color: transparent;
   border: 1px solid $background-color;
@@ -181,37 +160,24 @@
 
 .pop-up-add__close-button {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 19px;
+  right: 14px;
   display: block;
-  width: 14px;
-  height: 14px;
   background-color: transparent;
   border: none;
+  filter: invert(1);
 
   &:hover,
   &:focus {
     opacity: 0.8;
     cursor: pointer;
     background-color: $background-color;
+    filter: invert(0);
   }
 
   &:active {
     opacity: 0.5;
   }
-}
-
-.pop-up-add__close-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 14px;
-  height: 14px;
-  background-image: url("../img/icon-close_button.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: invert(1);
 }
 
 @media (max-width: $tablet-width-only) {
@@ -224,7 +190,7 @@
   }
 
   .pop-up-add__product {
-    padding: 0 30px 36px;
+    padding: 0 24px 36px 30px;
   }
 
   .pop-up-add__product img {
@@ -232,12 +198,12 @@
     height: auto;
   }
 
-  .pop-up-add__quantity button:first-child {
-    margin-top: 4px;
+  .pop-up-add__quantity-button {
+    margin: 3px 0 5px;
   }
 
-  .pop-up-add__quantity button:last-child {
-    margin-bottom: 0;
+  .pop-up-add__quantity-button:last-child {
+    margin: 0 0 4px;
   }
 
   .pop-up-add__info {
@@ -248,8 +214,13 @@
     padding: 0 30px;
   }
 
-  .pop-up-add__buttons a {
+  .pop-up-add__button {
     width: 206px;
+    padding: 24px 6px 21px 0;
+  }
+
+  .pop-up-add__button--hollow {
+    padding: 24px 0 21px;
   }
 }
 
@@ -271,8 +242,9 @@
   }
 
   .pop-up-add__product {
+    align-items: flex-start;
     margin: 0 0 22px;
-    padding: 0 15px 26px;
+    padding: 0 9px 20px 15px;
   }
 
   .pop-up-add__product img {
@@ -292,17 +264,17 @@
     line-height: 21px;
   }
 
-  .pop-up-add__quantity button:first-child {
-    margin: 4px 0 6px;
-  }
-
-  .pop-up-add__quantity button:last-child::before {
-    top: 8px;
-  }
-
   .pop-up-add__quantity p {
     font-size: 16px;
     line-height: 21px;
+  }
+
+  .pop-up-add__quantity-button {
+    margin: 3px 0 10px;
+  }
+
+  .pop-up-add__quantity-button:last-child {
+    margin: 4px 0 0;
   }
 
   .pop-up-add__info {
@@ -310,7 +282,7 @@
     padding: 0 15px;
   }
 
-  .pop-up-add__info span {
+  .pop-up-add__info-text {
     display: block;
     margin: 0 0 11px;
     font-size: 12px;
@@ -321,13 +293,18 @@
     padding: 0 15px;
   }
 
-  .pop-up-add__buttons a {
+  .pop-up-add__button {
     width: 100%;
-    margin: 0 0 21px;
+    margin: 0 0 20px;
+    padding: 24px 0 23px;
+  }
+
+  .pop-up-add__button--hollow {
+    padding: 23px 0 22px;
   }
 
   .pop-up-add__close-button {
-    top: 15px;
-    right: 15px;
+    top: 14px;
+    right: 9px;
   }
 }

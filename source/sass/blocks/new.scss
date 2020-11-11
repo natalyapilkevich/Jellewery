@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 1366px;
   margin: 0 auto;
-  padding: 0;
+  padding: 121px 0 22px;
   box-sizing: border-box;
 }
 
@@ -10,17 +10,25 @@
   position: relative;
   width: 100%;
   margin: 0;
-  padding: 0 6.076% 94px;
+  padding: 0 6.076% 72px;
   box-sizing: border-box;
 }
 
 @media (max-width: $tablet-width-only) {
+  .new {
+    padding: 71px 0 0;
+  }
+
   .new__product-slider {
     padding: 0 3.906% 63px;
   }
 }
 
 @media (max-width: $mobile-width-only) {
+  .new {
+    padding: 31px 0 0;
+  }
+
   .new__product-slider {
     padding: 30px 0 53px;
   }

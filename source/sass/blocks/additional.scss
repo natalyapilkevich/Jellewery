@@ -1,8 +1,8 @@
 .additional {
   width: 100%;
   max-width: 1366px;
-  margin: 0 auto 103px;
-  padding: 0;
+  margin: 0 auto;
+  padding: 0 0 125px;
   box-sizing: border-box;
 }
 
@@ -10,7 +10,7 @@
   position: relative;
   width: 100%;
   margin: 0;
-  padding: 0 6.076% 94px;
+  padding: 0 6.076% 72px;
   box-sizing: border-box;
 }
 
@@ -28,7 +28,7 @@
 
 @media (max-width: $tablet-width-only) {
   .additional {
-    margin: 0 auto 74px;
+    padding: 0 0 74px;
   }
 
   .additional__product-slider {
@@ -42,7 +42,7 @@
 
 @media (max-width: $mobile-width-only) {
   .additional {
-    margin: 0 auto 64px;
+    padding: 0 0 64px;
   }
 
   .additional__product-slider {

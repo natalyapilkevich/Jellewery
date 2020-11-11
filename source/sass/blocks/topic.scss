@@ -1,6 +1,6 @@
 .topic {
   width: 100%;
-  margin: 0 auto 121px;
+  margin: 0 auto;
   padding: 187px 0 179px 1px;
   box-sizing: border-box;
   background: $background-color url("../img/bg-main-topic-desktop@1x.jpg") center no-repeat;
@@ -64,7 +64,7 @@
 
 @media (max-width: $tablet-width-only) {
   .topic {
-    margin: 0 auto 71px;
+    margin: 0 auto;
     padding: 187px 18px 179px 0;
     background: $background-color url("../img/bg-main-topic-tablet@1x.jpg") center no-repeat;
     background-size: cover;
@@ -90,7 +90,7 @@
 
 @media (max-width: $mobile-width-only) {
   .topic {
-    margin: 0 auto 31px;
+    margin: 0 auto;
     padding: 196px 0 189px 1px;
     background: $background-color url("../img/bg-main-topic-mobile@1x.jpg") center no-repeat;
     background-size: cover;

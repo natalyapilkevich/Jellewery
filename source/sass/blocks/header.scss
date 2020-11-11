@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.header button {
+.header__open-button {
   display: none;
 }
 
@@ -72,7 +72,7 @@
   min-height: 60px;
 }
 
-.header__nav ul {
+.header__menu {
   display: none;
   margin: 0;
   padding: 0;
@@ -84,7 +84,7 @@
   flex-wrap: wrap;
 }
 
-.header__tools a {
+.header__tools-link {
   display: block;
   margin-left: 36px;
   padding: 5px 0;
@@ -105,11 +105,15 @@
   }
 }
 
-.header__tools .header__login {
+.header__tools-link--login {
   margin-left: 92px;
 }
 
-.header__bag span:last-of-type {
+.header__tools-link--bag svg {
+  display: none;
+}
+
+.header__tools-counter--number {
   margin-left: 2px;
 }
 
@@ -121,7 +125,7 @@
     padding: 13px 7.17%;
   }
 
-  .header__main-menu--catalog a {
+  .header__main-menu-link--catalog {
     display: block;
     margin: 0;
     padding: 5px 0;
@@ -142,15 +146,15 @@
     }
   }
 
-  .header__main-menu--catalog li {
+  .header__main-menu-item-catalog {
     margin-right: 35px;
   }
 
-  .header__main-menu--catalog li:last-child {
+  .header__main-menu-item-catalog:last-child {
     margin-right: 0;
   }
 
-  .header__main-menu--catalog li:first-child {
+  .header__main-menu-item-catalog:first-child {
     margin-left: 10px;
   }
 }
@@ -163,7 +167,7 @@
   }
 
   .header--closed .header__search,
-  .header--closed .header__login {
+  .header--closed .header__tools-link--login {
     display: none;
   }
 
@@ -183,25 +187,23 @@
     overflow-y: auto;
   }
 
-  .header button {
+  .header__open-button {
     position: relative;
     display: block;
-    width: 25px;
-    height: 18px;
+    margin: 2px 0 0;
+    padding: 0;
     background-color: transparent;
     border: none;
-  }
 
-  .header button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 25px;
-    height: 18px;
-    background-image: url("../img/icon-menu_burger.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 
   .header--opened .header__top {
@@ -252,12 +254,12 @@
     }
   }
 
-  .header--opened ul {
+  .header--opened .header__menu {
     display: block;
     padding: 0 0 19px;
   }
 
-  .header__main-menu a {
+  .header__main-menu-link {
     display: inline-block;
     vertical-align: middle;
     margin: 0 0 11px;
@@ -279,7 +281,7 @@
     }
   }
 
-  .header__service-menu a {
+  .header__service-menu-link {
     display: inline-block;
     vertical-align: middle;
     margin: 0 0 10px;
@@ -301,11 +303,11 @@
     }
   }
 
-  .header__tools a {
+  .header__tools-link {
     margin-left: 8px;
   }
 
-  .header--opened .header__login {
+  .header--opened .header__tools-link--login {
     position: absolute;
     top: 677px;
     left: 0;
@@ -319,35 +321,26 @@
     color: white;
   }
 
-  .header__bag {
+  .header__tools-link--bag {
     position: relative;
     width: 20px;
     height: 18px;
   }
 
-  .header__bag span {
+  .header__tools-counter {
     display: none;
   }
 
-  .header__bag::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    right: -1px;
-    width: 20px;
-    height: 18px;
-    background-image: url("../img/icon-shop_bag.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
+  .header__tools-link--bag svg {
+    display: inline;
+    fill: transparent;
   }
 
-  .header--opened svg,
-  .header--opened button::before,
-  .header--opened .header__bag::after {
+  .header--opened svg {
     filter: brightness(0) invert(1);
   }
 
-  .header--nojs button {
+  .header--nojs .header__open-button {
     display: none;
   }
 
@@ -385,11 +378,11 @@
     top: 102px;
   }
 
-  .header--opened ul {
+  .header--opened .header__menu {
     padding: 0 0 10px;
   }
 
-  .header__tools .header__login {
+  .header__tools .header__tools-link--login {
     top: 612px;
   }
 }

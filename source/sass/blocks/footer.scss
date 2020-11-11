@@ -83,7 +83,7 @@
   }
 }
 
-.footer__mail-form a {
+.footer__mail-form-link {
   position: absolute;
   bottom: 25px;
   right: 60px;
@@ -119,7 +119,7 @@
   padding: 0;
 }
 
-.footer__menu ul {
+.footer__menu-list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -128,11 +128,11 @@
   list-style: none;
 }
 
-.footer__menu ul:first-child {
+.footer__menu-list:first-child {
   margin: 0;
 }
 
-.footer__menu a {
+.footer__menu-link {
   display: block;
   margin: 0 0 11px;
   padding: 5px 0;
@@ -154,7 +154,7 @@
   }
 }
 
-.footer__social svg {
+.footer__menu-list--social svg {
   margin: 1px 13px 0 0;
 }
 
@@ -181,7 +181,7 @@
     margin: 0 0 36px;
   }
 
-  .footer__mail-form a {
+  .footer__mail-form-link {
     bottom: 45px;
     right: -4px;
   }
@@ -190,11 +190,11 @@
     margin: 0 0 0 10px;
   }
 
-  .footer__menu ul {
+  .footer__menu-list {
     margin: 0 0 0 88px;
   }
 
-  .footer__social svg {
+  .footer__menu-list--social svg {
     margin: 1px 11px 0 0;
   }
 }
@@ -225,24 +225,24 @@
     flex-direction: column;
   }
 
-  .footer__menu ul {
+  .footer__menu-list {
     margin: 0 0 24px;
   }
 
-  .footer__menu ul:first-child {
+  .footer__menu-list:first-child {
     margin: 0 0 20px;
   }
 
-  .footer__menu .footer__social {
+  .footer__menu-list--social {
     flex-direction: row;
     margin: 0;
   }
 
-  .footer__social span {
+  .footer__menu-list--social span {
     display: none;
   }
 
-  .footer__social svg {
+  .footer__menu-list--social svg {
     width: 21px;
     height: 21px;
     margin: 0 33px 0 -5px;

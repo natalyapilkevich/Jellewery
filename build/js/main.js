@@ -2,6 +2,8 @@
 
 (function () {
 
+  var MIN_TABLET_WIDTH = 768;
+
   // открытие/закрытие модального окна
 
   var body = document.querySelector('body');
@@ -49,7 +51,7 @@
 
   // открытие/закрытие окна Login
 
-  var openLoginButton = document.querySelector('.header__login');
+  var openLoginButton = document.querySelector('.header__tools-link--login');
   var loginPopUp = document.querySelector('.pop-up-login');
   var closeLoginButton = loginPopUp.querySelector('.pop-up-login__close-button');
   var loginEmail = loginPopUp.querySelector('[name=usermail]');
@@ -281,7 +283,7 @@
     var cardSwiper;
 
     var createCardSlider = function () {
-      if (window.innerWidth < 768 && cardSlider.dataset.mobile === 'false') {
+      if (window.innerWidth < MIN_TABLET_WIDTH && cardSlider.dataset.mobile === 'false') {
         var cardPagination = document.createElement('div');
         cardPagination.className = 'swiper-pagination card__pagination';
         var cardContainer = document.querySelector('.card__swiper-container');
@@ -297,7 +299,7 @@
         cardSlider.dataset.mobile = 'true';
       }
 
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= MIN_TABLET_WIDTH) {
         cardSlider.dataset.mobile = 'false';
         if (cardSlider.classList.contains('swiper-container-initialized')) {
           cardSwiper.destroy();
