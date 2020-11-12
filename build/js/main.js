@@ -7,7 +7,6 @@
   // открытие/закрытие модального окна
 
   var body = document.querySelector('body');
-  var background = document.querySelector('.overlay');
 
   var onPopupEscPress = function (evt) {
     if (evt.key === 'Escape') {
@@ -16,19 +15,28 @@
     }
   };
 
+  var onBackgroundClick = function () {
+    closePopup();
+  };
+
   var closePopup = function () {
     var openModal = document.querySelector('.pop-up--show');
     openModal.classList.remove('pop-up--show');
-    background.classList.remove('overlay--show');
+    var background = document.querySelector('.overlay--show');
+    body.removeChild(background);
     body.classList.remove('overflow');
     document.removeEventListener('keydown', onPopupEscPress);
+    background.removeEventListener('click', onBackgroundClick);
   };
 
   var openPopup = function (modal) {
     modal.classList.add('pop-up--show');
-    background.classList.add('overlay--show');
+    var background = document.createElement('div');
+    background.className = 'overlay--show';
+    body.appendChild(background);
     body.classList.add('overflow');
     document.addEventListener('keydown', onPopupEscPress);
+    background.addEventListener('click', onBackgroundClick);
   };
 
   // Обработчик клика для открытия/закрытия блока
@@ -82,10 +90,6 @@
 
   closeLoginButton.addEventListener('click', function (evt) {
     evt.preventDefault();
-    closePopup();
-  });
-
-  background.addEventListener('click', function () {
     closePopup();
   });
 
@@ -239,10 +243,6 @@
       evt.preventDefault();
       closePopup();
     });
-
-    background.addEventListener('click', function () {
-      closePopup();
-    });
   }
 
   // Карточка товара
@@ -318,31 +318,17 @@
     var openCartButton = card.querySelector('.card__add-to-cart');
     var cartPopUp = document.querySelector('.pop-up-add');
     var closeCartButton = cartPopUp.querySelector('.pop-up-add__close-button');
-    var backgroundCard = document.querySelector('.overlay-cart');
-
-    onPopupEscPress = function (evt) {
-      if (evt.key === 'Escape') {
-        evt.preventDefault();
-        closePopup();
-        backgroundCard.classList.remove('overlay-cart--show');
-      }
-    };
 
     openCartButton.addEventListener('click', function (evt) {
       evt.preventDefault();
       openPopup(cartPopUp);
-      backgroundCard.classList.add('overlay-cart--show');
+      var background = document.querySelector('.overlay--show');
+      background.classList.add('overlay-cart');
     });
 
     closeCartButton.addEventListener('click', function (evt) {
       evt.preventDefault();
       closePopup();
-      backgroundCard.classList.remove('overlay-cart--show');
-    });
-
-    backgroundCard.addEventListener('click', function () {
-      closePopup();
-      backgroundCard.classList.remove('overlay-cart--show');
     });
   }
 })();

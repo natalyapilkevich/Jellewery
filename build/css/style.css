@@ -82,7 +82,7 @@ a {
   height: 100%;
   background: #e5e5e5; }
 
-.overlay-cart--show + .overlay--show {
+.overlay-cart.overlay--show {
   position: fixed;
   top: 0;
   left: 0;
@@ -1076,7 +1076,7 @@ button.swiper-pagination-bullet {
   margin-left: 2px; }
 
 @media (min-width: 1024px) {
-  .header__nav .header__main-menu--catalog {
+  .header__nav .header__menu--main-catalog {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

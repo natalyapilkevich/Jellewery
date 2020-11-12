@@ -33,7 +33,7 @@ a {
   background: #e5e5e5;
 }
 
-.overlay-cart--show + .overlay--show {
+.overlay-cart.overlay--show {
   position: fixed;
   top: 0;
   left: 0;
