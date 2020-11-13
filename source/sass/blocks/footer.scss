@@ -72,8 +72,10 @@
   margin: 0;
   padding: 7px 0;
   box-sizing: border-box;
+  color: white;
   background-color: transparent;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid white;
 
   &:hover,
@@ -83,7 +85,7 @@
   }
 }
 
-.footer__mail-form-link {
+.footer__mail-form-button {
   position: absolute;
   bottom: 25px;
   right: 60px;
@@ -95,6 +97,8 @@
   font-size: 16px;
   line-height: 21px;
   color: white;
+  background-color: transparent;
+  border: none;
 
   &:hover,
   &:focus {
@@ -181,7 +185,7 @@
     margin: 0 0 36px;
   }
 
-  .footer__mail-form-link {
+  .footer__mail-form-button {
     bottom: 45px;
     right: -4px;
   }
@@ -201,6 +205,7 @@
 
 @media (max-width: $mobile-width-only) {
   .footer__main {
+    flex-direction: column;
     padding: 50px 4.69% 37px;
   }
 

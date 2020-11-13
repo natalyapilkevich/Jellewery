@@ -3,6 +3,7 @@
 (function () {
 
   var MIN_TABLET_WIDTH = 768;
+  var MIN_DESKTOP_WIDTH = 1024;
 
   // открытие/закрытие модального окна
 
@@ -206,10 +207,35 @@
 
     // открытие/скрытие fieldset
 
-    var fieldsets = filter.querySelectorAll('.filters__fieldset');
-    for (i = 0; i < fieldsets.length; i++) {
-      addTabsClickToggle(fieldsets[i], 'filters__fieldset--active');
-      addTabsEnterToggle(fieldsets[i], 'filters__fieldset--active');
+    var legends = filter.querySelectorAll('.filters__legend');
+    for (i = 0; i < legends.length; i++) {
+      addTabsClickToggle(legends[i], 'filters__legend--active');
+      addTabsEnterToggle(legends[i], 'filters__legend--active');
+    }
+
+    // Запрет табуляции по неоткрытым вкладкам фильтра
+
+    var changeTabOrder = function () {
+      var activeElements = filter.querySelectorAll('input');
+      for (i = 0; i < activeElements.length; i++) {
+        activeElements[i].tabIndex = '-1';
+      }
+
+      var tabActiveElements = filter.querySelectorAll('.filters__legend--active ~ input');
+      for (i = 0; i < tabActiveElements.length; i++) {
+        tabActiveElements[i].tabIndex = '0';
+      }
+    };
+
+    changeTabOrder();
+
+    for (i = 0; i < legends.length; i++) {
+      legends[i].addEventListener('click', changeTabOrder);
+      legends[i].addEventListener('keydown', function (evt) {
+        if (evt.key === 'Enter') {
+          changeTabOrder();
+        }
+      });
     }
 
     // очистка чекбоксов по кнопке Clear All
@@ -229,20 +255,22 @@
     var closeFilterButton = filter.querySelector('.filters__close-button');
     var applyFiltersButton = filter.querySelector('.filters button[type=submit]');
 
-    openFilterButton.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      openPopup(filterPopUp);
-    });
+    if (window.innerWidth < MIN_DESKTOP_WIDTH) {
+      openFilterButton.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        openPopup(filterPopUp);
+      });
 
-    closeFilterButton.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      closePopup();
-    });
+      closeFilterButton.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        closePopup();
+      });
 
-    applyFiltersButton.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      closePopup();
-    });
+      applyFiltersButton.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        closePopup();
+      });
+    }
   }
 
   // Карточка товара

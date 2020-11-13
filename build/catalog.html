@@ -62,8 +62,8 @@
           <form class="filters__form pop-up" action="https://echo.htmlacademy.ru/" method="post">
             <div class="filters__wrapper">
               <div class="filters__fieldset-wrapper">
-                <fieldset class="filters__fieldset filters__fieldset--active" tabindex="0">
-                  <legend>
+                <fieldset class="filters__fieldset">
+                  <legend class="filters__legend filters__legend--active" tabindex="0">
                     <span>Product</span>
                     <svg width="16" height="10"><use xlink:href="img/sprite_auto.svg#icon-arrow_down"></use></svg>
                   </legend>
@@ -78,38 +78,38 @@
                 </fieldset>
               </div>
               <div class="filters__fieldset-wrapper">
-                <fieldset class="filters__fieldset" tabindex="0">
-                  <legend>
+                <fieldset class="filters__fieldset">
+                  <legend class="filters__legend" tabindex="0">
                     <span>Material</span>
                     <svg width="16" height="10"><use xlink:href="img/sprite_auto.svg#icon-arrow_down"></use></svg>
                   </legend>
-                  <input class="visually-hidden" id="gold" type="checkbox" name="gold">
+                  <input class="visually-hidden" id="gold" type="checkbox" name="gold" aria-label="gold">
                   <label for="gold">Gold</label>
-                  <input class="visually-hidden" id="leather" type="checkbox" name="leather">
+                  <input class="visually-hidden" id="leather" type="checkbox" name="leather" aria-label="leather">
                   <label for="leather">Leather</label>
-                  <input class="visually-hidden" id="gemstone" type="checkbox" name="gemstone">
+                  <input class="visually-hidden" id="gemstone" type="checkbox" name="gemstone" aria-label="gemstone">
                   <label for="gemstone">Gemstone</label>
                 </fieldset>
               </div>
               <div class="filters__fieldset-wrapper">
-                <fieldset class="filters__fieldset" tabindex="0">
-                  <legend>
+                <fieldset class="filters__fieldset">
+                  <legend class="filters__legend" tabindex="0">
                     <span>Collection</span>
                     <svg width="16" height="10"><use xlink:href="img/sprite_auto.svg#icon-arrow_down"></use></svg>
                   </legend>
-                  <input class="visually-hidden" id="2020" type="checkbox" name="2020">
+                  <input class="visually-hidden" id="2020" type="checkbox" name="2020" aria-label="2020">
                   <label for="2020">New 2020</label>
-                  <input class="visually-hidden" id="luxury" type="checkbox" name="luxury">
+                  <input class="visually-hidden" id="luxury" type="checkbox" name="luxury" aria-label="luxury">
                   <label for="luxury">Luxury</label>
-                  <input class="visually-hidden" id="romantic" type="checkbox" name="romantic">
+                  <input class="visually-hidden" id="romantic" type="checkbox" name="romantic" aria-label="romantic">
                   <label for="romantic">Romantic</label>
-                  <input class="visually-hidden" id="casual" type="checkbox" name="casual">
+                  <input class="visually-hidden" id="casual" type="checkbox" name="casual" aria-label="casual">
                   <label for="casual">Casual</label>
                 </fieldset>
               </div>
               <div class="filters__fieldset-wrapper">
-                <fieldset class="filters__fieldset filters__fieldset--active" tabindex="0">
-                  <legend>
+                <fieldset class="filters__fieldset">
+                  <legend class="filters__legend filters__legend--active" tabindex="0">
                     <span>Price</span>
                     <svg width="16" height="10"><use xlink:href="img/sprite_auto.svg#icon-arrow_down"></use></svg>
                   </legend>
@@ -121,9 +121,11 @@
                     </div>
                     <div class="filters__price-controls">
                       <span> $ </span>
-                      <input type="number" name="min" value="55">
+                      <input id="min-price" type="text" name="min" value="55" aria-label="Минимальная цена">
+                      <label for="min-price"></label>
                       <span> $ </span>
-                      <input type="number" name="max" value="155">
+                      <input id="max-price" type="text" name="max" value="155" aria-label="Максимальная цена">
+                      <label for="max-price"></label>
                     </div>
                   </div>
                 </fieldset>
@@ -355,11 +357,11 @@
           <form>
             <label for="mail" aria-label="Ваша почта"></label>
             <input id="mail" type="email" name="mail" placeholder="Your E-mail" required="">
+            <button class="footer__mail-form-button" type="submit">
+              <span>Sign Up</span>
+              <svg width="32" height="10"><use xlink:href="img/sprite_auto.svg#icon-arrow_right"></use></svg>
+            </button>
           </form>
-          <a class="footer__mail-form-link" href="#">
-            <span>Sign Up</span>
-            <svg width="32" height="10"><use xlink:href="img/sprite_auto.svg#icon-arrow_right"></use></svg>
-          </a>
         </div>
         <div class="footer__menu">
           <ul class="footer__menu-list">

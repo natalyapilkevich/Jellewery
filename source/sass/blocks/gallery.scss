@@ -71,6 +71,11 @@
   line-height: 0;
 }
 
+.gallery__picture-block-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
 .gallery__picture-block {
   display: flex;
   flex-wrap: wrap;
@@ -101,7 +106,8 @@
     padding: 0 4.6875%;
   }
 
-  .gallery__picture-block img {
+  .gallery__picture-block img,
+  .gallery__picture-block--third > picture:last-child img {
     width: 126px;
     height: auto;
     margin: 9px;
@@ -138,7 +144,8 @@
     padding: 0 2.344%;
   }
 
-  .gallery__picture-block img {
+  .gallery__picture-block img,
+  .gallery__picture-block--third > picture:last-child img {
     width: 130px;
     height: auto;
     margin: 7.5px;

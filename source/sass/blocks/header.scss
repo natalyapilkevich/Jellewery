@@ -60,6 +60,8 @@
   margin: 0;
   padding: 5px;
   border: none;
+  border-radius: 0;
+  color: $main_text-color;
 
   &:hover,
   &:focus {
@@ -241,7 +243,7 @@
   }
 
   .header__top input {
-    padding: 9.5px;
+    padding: 9.5px 9.5px 9.5px 36px;
     background: rgba(255, 255, 255, 0.15);
     border: none;
     border-radius: 21px;
@@ -344,10 +346,10 @@
     display: none;
   }
 
-  .header--opened.header--nojs {
+  .header--nojs {
     position: static;
     display: block;
-    height: auto;
+    overflow-y: unset;
   }
 }
 
@@ -384,5 +386,11 @@
 
   .header__tools .header__tools-link--login {
     top: 612px;
+  }
+
+  .header--nojs {
+    position: static;
+    display: block;
+    overflow-y: unset;
   }
 }

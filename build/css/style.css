@@ -790,7 +790,7 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 767px) {
   .product img {
-    width: 130px;
+    width: 81.5%;
     height: auto;
     margin: 0 0 14px; } }
 
@@ -1030,7 +1030,9 @@ button.swiper-pagination-bullet {
   width: 100%;
   margin: 0;
   padding: 5px;
-  border: none; }
+  border: none;
+  border-radius: 0;
+  color: #1d1613; }
   .header__top input:hover, .header__top input:focus {
     outline: 1px solid #a87b62;
     cursor: pointer; }
@@ -1176,7 +1178,7 @@ button.swiper-pagination-bullet {
   .header__top input::placeholder {
     color: transparent; }
   .header__top input {
-    padding: 9.5px;
+    padding: 9.5px 9.5px 9.5px 36px;
     background: rgba(255, 255, 255, 0.15);
     border: none;
     border-radius: 21px; }
@@ -1245,10 +1247,10 @@ button.swiper-pagination-bullet {
             filter: brightness(0) invert(1); }
   .header--nojs .header__open-button {
     display: none; }
-  .header--opened.header--nojs {
+  .header--nojs {
     position: static;
     display: block;
-    height: auto; } }
+    overflow-y: unset; } }
 
 @media (max-width: 767px) {
   .header__top {
@@ -1269,7 +1271,11 @@ button.swiper-pagination-bullet {
   .header--opened .header__menu {
     padding: 0 0 10px; }
   .header__tools .header__tools-link--login {
-    top: 612px; } }
+    top: 612px; }
+  .header--nojs {
+    position: static;
+    display: block;
+    overflow-y: unset; } }
 
 .main {
   -webkit-box-flex: 1;
@@ -1900,6 +1906,14 @@ button.swiper-pagination-bullet {
   padding: 0 6.076%;
   line-height: 0; }
 
+.gallery__picture-block-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
 .gallery__picture-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1934,7 +1948,8 @@ button.swiper-pagination-bullet {
     margin: 0 auto 55px; }
   .gallery__wrapper {
     padding: 0 4.6875%; }
-  .gallery__picture-block img {
+  .gallery__picture-block img,
+  .gallery__picture-block--third > picture:last-child img {
     width: 126px;
     height: auto;
     margin: 9px; }
@@ -1955,7 +1970,8 @@ button.swiper-pagination-bullet {
     margin: 0 auto 42px; }
   .gallery__wrapper {
     padding: 0 2.344%; }
-  .gallery__picture-block img {
+  .gallery__picture-block img,
+  .gallery__picture-block--third > picture:last-child img {
     width: 130px;
     height: auto;
     margin: 7.5px; }
@@ -1996,7 +2012,7 @@ button.swiper-pagination-bullet {
   padding: 0 24px;
   border: none; }
 
-.filters__fieldset legend {
+.filters__legend {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2006,7 +2022,7 @@ button.swiper-pagination-bullet {
           justify-content: space-between;
   width: 100%;
   margin: 0;
-  padding: 25px 0 20px;
+  padding: 24px 0 21px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-style: normal;
@@ -2014,25 +2030,28 @@ button.swiper-pagination-bullet {
   font-size: 16px;
   line-height: 21px;
   color: #1d1613; }
-  .filters__fieldset legend:hover, .filters__fieldset legend:focus {
+  .filters__legend:hover, .filters__legend:focus {
     opacity: 0.8;
     cursor: pointer; }
-  .filters__fieldset legend:active {
+  .filters__legend:active {
     opacity: 0.5; }
 
-.filters__fieldset svg {
+.filters__legend--active {
+  padding: 24px 0 19px; }
+
+.filters__legend svg {
   padding: 4px 0;
   fill: transparent; }
 
-.filters__fieldset--active svg {
+.filters__legend--active svg {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }
 
 .filters__fieldset label {
   display: none;
   position: relative;
-  margin: 0 9px 12px;
-  padding: 0 0 0 25px;
+  margin: 0 10px 12px;
+  padding: 0 0 0 26px;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -2048,17 +2067,17 @@ button.swiper-pagination-bullet {
   display: none;
   width: 100%; }
 
-.filters__fieldset--active label,
-.filters__fieldset--active div {
+.filters__legend--active ~ label,
+.filters__legend--active ~ div {
   display: block; }
 
-.filters__fieldset label:first-of-type {
-  margin: 3px 9px 12px; }
+.filters__legend ~ label:first-of-type {
+  margin: 5px 10px 12px; }
 
-.filters__fieldset label:last-of-type {
-  margin: 0 9px 26px; }
+.filters__legend ~ label:last-of-type {
+  margin: 0 10px 26px; }
 
-.filters__fieldset label::before {
+.filters__legend ~ label::before {
   position: absolute;
   content: "";
   top: 0;
@@ -2067,12 +2086,15 @@ button.swiper-pagination-bullet {
   height: 13px;
   border: 1px solid #a87b62; }
 
-.filters__fieldset input:checked + label::before {
+.filters__legend ~ input:checked + label::before {
   background: #a87b62; }
 
-.filters__fieldset input:focus + label::before,
-.filters__fieldset label:hover::before {
+.filters__legend ~ input:focus + label::before,
+.filters__legend ~ label:hover::before {
   outline: 1px solid #a87b62; }
+
+.filters__price-controls label {
+  display: none; }
 
 .filters--nojs label {
   display: block; }
@@ -2080,11 +2102,11 @@ button.swiper-pagination-bullet {
 .filters__form button[type="submit"] {
   width: 100%;
   margin: 0 0 26px;
-  padding: 0;
+  padding: 24px 0 23px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 68px;
+  line-height: 21px;
   text-align: center;
   color: white;
   background-color: #a87b62;
@@ -2118,7 +2140,7 @@ button.swiper-pagination-bullet {
 .filters__clear-button::after {
   content: "";
   position: absolute;
-  bottom: -3px;
+  bottom: -5px;
   left: calc(50% - 33.5px);
   width: 67px;
   height: 1px;
@@ -2127,6 +2149,7 @@ button.swiper-pagination-bullet {
 .filters__price-controls {
   display: inline-block;
   vertical-align: middle;
+  width: 100%;
   margin: 0 0 17px;
   font-style: normal;
   font-weight: 500;
@@ -2135,7 +2158,7 @@ button.swiper-pagination-bullet {
   color: #1d1613; }
 
 .filters__price-controls span {
-  margin-left: 18.69%; }
+  margin-left: 19.4%; }
 
 .filters__price-controls span:last-of-type {
   margin-left: 30.81%; }
@@ -2151,7 +2174,7 @@ button.swiper-pagination-bullet {
   position: relative;
   width: 100%;
   height: 1px;
-  margin: 4px 0 14px;
+  margin: 6px 0 14px;
   background-color: #f0eae4; }
 
 .filters__bar {
@@ -2243,23 +2266,23 @@ button.swiper-pagination-bullet {
     margin: 0 0 41px; }
   .filters__fieldset {
     padding: 0 40px; }
-  .filters__fieldset legend {
+  .filters__legend {
     padding: 36px 0 32px;
     font-size: 18px;
     line-height: 23px; }
-  .filters__fieldset svg {
+  .filters__legend svg {
     width: 24px;
     height: 14px; }
-  .filters__fieldset label {
+  .filters__legend ~ label {
     margin: 0 10px 17px;
     padding: 0 0 0 30px;
     font-size: 16px;
     line-height: 21px; }
-  .filters__fieldset label:first-of-type {
+  .filters__legend ~ label:first-of-type {
     margin: -9px 10px 17px; }
-  .filters__fieldset label:last-of-type {
+  .filters__legend ~ label:last-of-type {
     margin: 0 10px 36px; }
-  .filters__fieldset label::before {
+  .filters__legend ~ label::before {
     width: 16px;
     height: 16px; }
   .filters--nojs .filters__form {
@@ -2340,14 +2363,14 @@ button.swiper-pagination-bullet {
     margin: 0 0 30px; }
   .filters__fieldset {
     padding: 0 20px; }
-  .filters__fieldset legend {
+  .filters__legend {
     padding: 26px 0 22px; }
-  .filters__fieldset svg {
+  .filters__legend svg {
     width: 21px;
     height: 11px; }
-  .filters__fieldset label:first-of-type {
+  .filters__legend ~ label:first-of-type {
     margin: 1px 10px 17px; }
-  .filters__fieldset label:last-of-type {
+  .filters__legend ~ label:last-of-type {
     margin: 0 10px 26px; }
   .filters__form button[type="submit"] {
     width: 85.2%;
@@ -2499,6 +2522,8 @@ button.swiper-pagination-bullet {
   .catalog__product {
     width: 130px;
     margin: 15px 15px 10px; }
+  .catalog__product img {
+    width: 100%; }
   .catalog__paganation {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2534,20 +2559,18 @@ button.swiper-pagination-bullet {
           align-items: flex-start;
   padding: 0 6.076%; }
 
-@media (max-width: 1243px) {
-  .card__wrapper {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; } }
-
 .card__gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 630px; }
+  width: 52.5%; }
+
+.card__gallery img {
+  width: 100%;
+  height: auto; }
 
 .card__item--desktop-tablet-only {
-  margin: 15px; }
+  margin: 15px 2.38%; }
 
 .card__swiper-container {
   -webkit-box-ordinal-group: 0;
@@ -2563,7 +2586,7 @@ button.swiper-pagination-bullet {
           flex-direction: column; }
 
 .card__swiper-container .card__item {
-  width: auto;
+  width: 77%;
   height: auto;
   margin: 15px;
   line-height: 0; }
@@ -2577,7 +2600,7 @@ button.swiper-pagination-bullet {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 370px;
+  width: 30.833%;
   margin: 5px 15px 15px 7.083%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -2603,8 +2626,8 @@ button.swiper-pagination-bullet {
   color: #1d1613; }
 
 .card__link {
-  margin: 0 0 14px;
-  padding: 5px 35px 5px 0;
+  margin: 0 35px 14px 0;
+  padding: 5px 0;
   font-family: "Poppins", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -2697,9 +2720,9 @@ button.swiper-pagination-bullet {
   .card__wrapper {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 0 4.948%; }
   .card__gallery {
     display: -webkit-box;
@@ -2710,7 +2733,6 @@ button.swiper-pagination-bullet {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    min-width: 333px;
     width: 333px; }
   .card__item--desktop-tablet-only {
     margin: 10px 7px 4px; }
@@ -2735,8 +2757,8 @@ button.swiper-pagination-bullet {
     width: 97px;
     height: auto; }
   .card__description {
-    max-width: 319px;
-    margin: 0 7px 7px 26px; }
+    width: 319px;
+    margin: 0 7px 7px 33px; }
   .card__add-to-cart {
     margin: 0 0 16px; }
   .card__advantages-item {
@@ -2797,8 +2819,8 @@ button.swiper-pagination-bullet {
   .card__description > p {
     margin: 0 0 22px; }
   .card__link {
-    margin: 0 0 14px;
-    padding: 5px 38px 5px 0; }
+    margin: 0 38px 14px 0;
+    padding: 5px 0; }
   .card__info {
     margin: 0 0 36px; }
   .card__add-to-cart {
@@ -2893,6 +2915,7 @@ button.swiper-pagination-bullet {
           box-sizing: border-box;
   background-color: transparent;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid #1d1613; }
 
 .pop-up-login input:last-of-type {
@@ -3488,14 +3511,16 @@ button.swiper-pagination-bullet {
   padding: 7px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: white;
   background-color: transparent;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid white; }
   .footer__mail-form input:hover, .footer__mail-form input:focus {
     outline: 1px solid white;
     cursor: pointer; }
 
-.footer__mail-form-link {
+.footer__mail-form-button {
   position: absolute;
   bottom: 25px;
   right: 60px;
@@ -3506,11 +3531,13 @@ button.swiper-pagination-bullet {
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
-  color: white; }
-  .footer__mail-form-link:hover, .footer__mail-form-link:focus {
+  color: white;
+  background-color: transparent;
+  border: none; }
+  .footer__mail-form-button:hover, .footer__mail-form-button:focus {
     opacity: 0.8;
     cursor: pointer; }
-  .footer__mail-form-link:active {
+  .footer__mail-form-button:active {
     opacity: 0.5; }
 
 .footer__mail-form svg {
@@ -3576,7 +3603,7 @@ button.swiper-pagination-bullet {
     margin: 0 0 10px; }
   .footer__mail-form p {
     margin: 0 0 36px; }
-  .footer__mail-form-link {
+  .footer__mail-form-button {
     bottom: 45px;
     right: -4px; }
   .footer__mail-form svg {
@@ -3588,6 +3615,10 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 767px) {
   .footer__main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 50px 4.69% 37px; }
   .footer__mail-form {
     width: 290px; }
