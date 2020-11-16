@@ -120,10 +120,10 @@
                       <div class="filters__range-slider-pin filters__range-slider-pin--max"></div>
                     </div>
                     <div class="filters__price-controls">
-                      <span> $ </span>
+                      <span class="filters__price-text"> $ </span>
                       <input id="min-price" type="text" name="min" value="55" aria-label="Минимальная цена">
                       <label for="min-price"></label>
-                      <span> $ </span>
+                      <span class="filters__price-text"> $ </span>
                       <input id="max-price" type="text" name="max" value="155" aria-label="Максимальная цена">
                       <label for="max-price"></label>
                     </div>
@@ -133,7 +133,7 @@
               <button class="filters__close-button" type="button" aria-label="Закрыть окно настройки фильтров">
                 <svg width="14" height="14"><use xlink:href="img/sprite_auto.svg#icon-close_button"></use></svg>
               </button>
-              <button type="submit">Apply</button>
+              <button class="filters__submit-button" type="submit">Apply</button>
               <button class="filters__clear-button" type="button">Clear All</button>
             </div>
           </form>
@@ -335,7 +335,7 @@
           </ul>
           <div class="catalog__paganation">
             <a class="catalog__paganation-link" href="#">Previous</a>
-            <ol>
+            <ol class="catalog__paganation-list">
               <li><a class="catalog__paganation-link catalog__paganation-link--number catalog__paganation-link--number-active">1</a></li>
               <li><a class="catalog__paganation-link catalog__paganation-link--number" href="#">2</a></li>
               <li><a class="catalog__paganation-link catalog__paganation-link--number" href="#">3</a></li>
@@ -351,10 +351,10 @@
   <footer class="footer">
     <div class="footer__wrapper">
       <div class="footer__main">
-        <div class="footer__mail-form">
+        <div class="footer__mail-wrapper">
           <h2>The good stuff<br class="br-mobile"> in your inbox</h2>
           <p>News and updates from CH.<br class="br-mobile"> No spam, we promise.</p>
-          <form>
+          <form class="footer__mail-form">
             <label for="mail" aria-label="Ваша почта"></label>
             <input id="mail" type="email" name="mail" placeholder="Your E-mail" required="">
             <button class="footer__mail-form-button" type="submit">
@@ -380,25 +380,25 @@
             <li>
               <a class="footer__menu-link" href="#">
                 <svg width="15" height="15"><use xlink:href="img/sprite_auto.svg#icon-facebook"></use></svg>
-                <span>Facebook</span>
+                <span class="footer__social-text">Facebook</span>
               </a>
             </li>
             <li>
               <a class="footer__menu-link" href="#">
                 <svg width="15" height="15"><use xlink:href="img/sprite_auto.svg#icon-instagram"></use></svg>
-                <span>Instagram</span>
+                <span class="footer__social-text">Instagram</span>
               </a>
             </li>
             <li>
               <a class="footer__menu-link" href="#">
                 <svg width="15" height="15"><use xlink:href="img/sprite_auto.svg#icon-pinterest"></use></svg>
-                <span>Pinterest</span>
+                <span class="footer__social-text">Pinterest</span>
               </a>
             </li>
             <li>
               <a class="footer__menu-link" href="#">
                 <svg width="15" height="13"><use xlink:href="img/sprite_auto.svg#icon-twitter"></use></svg>
-                <span>Twitter</span>
+                <span class="footer__social-text">Twitter</span>
               </a>
             </li>
           </ul>

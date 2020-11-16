@@ -131,7 +131,7 @@
   display: block;
 }
 
-.filters__form button[type="submit"] {
+.filters__submit-button {
   width: 100%;
   margin: 0 0 26px;
   padding: 24px 0 23px;
@@ -203,11 +203,11 @@
   color: $main_text-color;
 }
 
-.filters__price-controls span {
+.filters__price-text {
   margin-left: 19.4%;
 }
 
-.filters__price-controls span:last-of-type {
+.filters__price-text:last-of-type {
   margin-left: 30.81%;
 }
 
@@ -386,7 +386,7 @@
     display: none;
   }
 
-  .filters__form button[type="submit"] {
+  .filters__submit-button {
     display: block;
     width: 82%;
     margin: 0 auto 25px;
@@ -435,11 +435,11 @@
     line-height: 21px;
   }
 
-  .filters__price-controls span {
+  .filters__price-text {
     margin-left: 12%;
   }
 
-  .filters__price-controls span:last-of-type {
+  .filters__price-text:last-of-type {
     margin-left: 42%;
   }
 
@@ -514,7 +514,7 @@
     margin: 0 10px 26px;
   }
 
-  .filters__form button[type="submit"] {
+  .filters__submit-button {
     width: 85.2%;
     margin: 0 auto 20px;
   }
@@ -533,11 +533,11 @@
     margin: 0 0 24px;
   }
 
-  .filters__price-controls span {
+  .filters__price-text {
     margin-left: 13%;
   }
 
-  .filters__price-controls span:last-of-type {
+  .filters__price-text:last-of-type {
     margin-left: 36%;
   }
 

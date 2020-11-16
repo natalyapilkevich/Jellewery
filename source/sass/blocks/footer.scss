@@ -20,7 +20,7 @@
   box-sizing: border-box;
 }
 
-.footer__mail-form {
+.footer__mail-wrapper {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -29,7 +29,7 @@
   padding: 0;
 }
 
-.footer__mail-form h2 {
+.footer__mail-wrapper h2 {
   margin: 0 0 8px;
   padding: 0;
   font-family: "Cormorant Garamond", "Arial", sans-serif;
@@ -41,7 +41,7 @@
   color: white;
 }
 
-.footer__mail-form p {
+.footer__mail-wrapper p {
   margin: 0 0 38px;
   padding: 0;
   font-style: normal;
@@ -51,14 +51,14 @@
   color: $service_text-color;
 }
 
-.footer__mail-form form {
+.footer__mail-form {
   width: 100%;
   margin: 0 62px 0 0;
   padding: 0 0 20px;
 }
 
-.footer__mail-form input,
-.footer__mail-form input::placeholder {
+.footer__mail-wrapper input,
+.footer__mail-wrapper input::placeholder {
   font-family: "Poppins", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -67,7 +67,7 @@
   color: $service_text-color;
 }
 
-.footer__mail-form input {
+.footer__mail-wrapper input {
   width: 100%;
   margin: 0;
   padding: 7px 0;
@@ -111,7 +111,7 @@
   }
 }
 
-.footer__mail-form svg {
+.footer__mail-wrapper svg {
   margin: 0 0 0 8px;
   filter: brightness(0) invert(1);
 }
@@ -167,21 +167,21 @@
     padding: 50px 5.86% 36px;
   }
 
-  .footer__mail-form {
+  .footer__mail-wrapper {
     width: 560px;
     margin: 0;
   }
 
-  .footer__mail-form form {
+  .footer__mail-form {
     margin: 0;
     padding: 0 0 42px;
   }
 
-  .footer__mail-form h2 {
+  .footer__mail-wrapper h2 {
     margin: 0 0 10px;
   }
 
-  .footer__mail-form p {
+  .footer__mail-wrapper p {
     margin: 0 0 36px;
   }
 
@@ -190,7 +190,7 @@
     right: -4px;
   }
 
-  .footer__mail-form svg {
+  .footer__mail-wrapper svg {
     margin: 0 0 0 10px;
   }
 
@@ -209,20 +209,20 @@
     padding: 50px 4.69% 37px;
   }
 
-  .footer__mail-form {
+  .footer__mail-wrapper {
     width: 290px;
   }
 
-  .footer__mail-form h2 {
+  .footer__mail-wrapper h2 {
     margin: 0 0 12px;
   }
 
-  .footer__mail-form p {
+  .footer__mail-wrapper p {
     margin: 0 0 36px;
     line-height: 22px;
   }
 
-  .footer__mail-form form {
+  .footer__mail-form {
     padding: 0 0 42px;
   }
 
@@ -243,7 +243,7 @@
     margin: 0;
   }
 
-  .footer__menu-list--social span {
+  .footer__social-text {
     display: none;
   }
 

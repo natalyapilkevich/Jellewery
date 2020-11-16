@@ -64,8 +64,8 @@
             </picture>
           </div>
           <div class="card__swiper-container swiper-container" data-mobile="false">
-            <div class="swiper-wrapper">
-              <div class="card__item card__item--mobile-only swiper-slide">
+            <div class="card__swiper-wrapper swiper-wrapper">
+              <div class="card__item card__item--swiper card__item--mobile-only swiper-slide">
                 <picture>
                   <!-- 1х: 290px; 2x: 580px -->
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-main_image-mobile@1x.webp 1x, img/product-main_image-mobile@2x.webp 2x">
@@ -73,7 +73,7 @@
                   <img src="img/product-main_image-mobile@1x.jpg" srcset="img/product-main_image-mobile@2x.jpg 2x" alt="Gold necklace" width="290" height="260">
                 </picture>
               </div>
-              <div class="card__item swiper-slide">
+              <div class="card__item card__item--swiper swiper-slide">
                 <picture>
                   <!-- 1х: 290px; 2x: 690px -->
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/product-main_image-mobile@1x.webp 1x, img/product-main_image-mobile@2x.webp 2x">
@@ -85,7 +85,7 @@
                   <img src="img/product-for_women-desktop@1x.jpg" srcset="img/product-for_women-desktop@2x.jpg 2x" alt="Gold necklace" width="100" height="125">
                 </picture>
               </div>
-              <div class="card__item swiper-slide">
+              <div class="card__item card__item--swiper swiper-slide">
                 <picture>
                   <!-- 1х: 290px; 2x: 690px -->
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/product-main_image-mobile@1x.webp 1x, img/product-main_image-mobile@2x.webp 2x">
@@ -97,7 +97,7 @@
                   <img src="img/product-common-desktop@1x.jpg" srcset="img/product-common-desktop@2x.jpg 2x" alt="Gold necklace" width="100" height="125">
                 </picture>
               </div>
-              <div class="card__item swiper-slide">
+              <div class="card__item card__item--swiper swiper-slide">
                 <picture>
                   <!-- 1х: 290px; 2x: 690px -->
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/product-main_image-mobile@1x.webp 1x, img/product-main_image-mobile@2x.webp 2x">
@@ -123,16 +123,16 @@
           <div class="card__info card__info--active">
             <table>
               <tr>
-                <td>Metal type</td>
-                <td>Gold 585</td>
+                <td class="card__info-cell">Metal type</td>
+                <td class="card__info-cell">Gold 585</td>
               </tr>
               <tr>
-                <td>Stone</td>
-                <td>Turquoise</td>
+                <td class="card__info-cell">Stone</td>
+                <td class="card__info-cell">Turquoise</td>
               </tr>
               <tr>
-                <td>Size</td>
-                <td>18” / 20”</td>
+                <td class="card__info-cell">Size</td>
+                <td class="card__info-cell">18” / 20”</td>
               </tr>
             </table>
           </div>
@@ -148,7 +148,7 @@
     <section class="additional">
       <div class="additional__product-slider product-slider">
         <h2>You May Also Like</h2>
-        <a class="product-slider__link" href="catalog.html">Shop Now</a>
+        <a class="additional__link product-slider__link" href="catalog.html">Shop Now</a>
         <div class="product-slider__swiper-container swiper-container">
           <div class="swiper-wrapper">
             <div class="product-slider__product product swiper-slide">
@@ -345,9 +345,9 @@
             </div>
           </div>
           <!-- Add Pagination -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
+          <div class="product-slider__swiper-button-next swiper-button-next"></div>
+          <div class="product-slider__swiper-button-prev swiper-button-prev"></div>
+          <div class="product-slider__swiper-pagination swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -355,10 +355,10 @@
   <footer class="footer">
     <div class="footer__wrapper">
       <div class="footer__main">
-        <div class="footer__mail-form">
+        <div class="footer__mail-wrapper">
           <h2>The good stuff<br class="br-mobile"> in your inbox</h2>
           <p>News and updates from CH.<br class="br-mobile"> No spam, we promise.</p>
-          <form>
+          <form class="footer__mail-form">
             <label for="mail" aria-label="Ваша почта"></label>
             <input id="mail" type="email" name="mail" placeholder="Your E-mail" required="">
             <button class="footer__mail-form-button" type="submit">
@@ -384,25 +384,25 @@
             <li>
               <a class="footer__menu-link" href="#">
                 <svg width="15" height="15"><use xlink:href="img/sprite_auto.svg#icon-facebook"></use></svg>
-                <span>Facebook</span>
+                <span class="footer__social-text">Facebook</span>
               </a>
             </li>
             <li>
               <a class="footer__menu-link" href="#">
                 <svg width="15" height="15"><use xlink:href="img/sprite_auto.svg#icon-instagram"></use></svg>
-                <span>Instagram</span>
+                <span class="footer__social-text">Instagram</span>
               </a>
             </li>
             <li>
               <a class="footer__menu-link" href="#">
                 <svg width="15" height="15"><use xlink:href="img/sprite_auto.svg#icon-pinterest"></use></svg>
-                <span>Pinterest</span>
+                <span class="footer__social-text">Pinterest</span>
               </a>
             </li>
             <li>
               <a class="footer__menu-link" href="#">
                 <svg width="15" height="13"><use xlink:href="img/sprite_auto.svg#icon-twitter"></use></svg>
-                <span>Twitter</span>
+                <span class="footer__social-text">Twitter</span>
               </a>
             </li>
           </ul>

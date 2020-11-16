@@ -255,9 +255,9 @@
             </div>
           </div>
           <!-- Add Pagination -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
+          <div class="product-slider__swiper-button-next swiper-button-next"></div>
+          <div class="product-slider__swiper-button-prev swiper-button-prev"></div>
+          <div class="product-slider__swiper-pagination swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -267,7 +267,7 @@
       <div class="blog__wrapper">
         <div class="blog__column">
           <article class="blog__article">
-            <div class="blog__article-info">
+            <div class="blog__article-info blog__article-info--right">
               <time datetime="2019-09-30">September 30, 2019</time>
               <h3>How to care for your jewellery</h3>
               <a class="blog__article-link" href="#">Read Article</a>
@@ -282,7 +282,7 @@
           </article>
         </div>
         <article class="blog__article blog__article--big">
-          <div class="blog__article-info">
+          <div class="blog__article-info blog__article-info--big">
             <time datetime="2019-09-16">September 16, 2019</time>
             <h3>AW 19 trends</h3>
             <a class="blog__article-link" href="#">Read Article</a>
@@ -411,10 +411,10 @@
   <footer class="footer">
     <div class="footer__wrapper">
       <div class="footer__main">
-        <div class="footer__mail-form">
+        <div class="footer__mail-wrapper">
           <h2>The good stuff<br class="br-mobile"> in your inbox</h2>
           <p>News and updates from CH.<br class="br-mobile"> No spam, we promise.</p>
-          <form>
+          <form class="footer__mail-form">
             <label for="mail" aria-label="Ваша почта"></label>
             <input id="mail" type="email" name="mail" placeholder="Your E-mail" required="">
             <button class="footer__mail-form-button" type="submit">
@@ -440,25 +440,25 @@
             <li>
               <a class="footer__menu-link" href="#">
                 <svg width="15" height="15"><use xlink:href="img/sprite_auto.svg#icon-facebook"></use></svg>
-                <span>Facebook</span>
+                <span class="footer__social-text">Facebook</span>
               </a>
             </li>
             <li>
               <a class="footer__menu-link" href="#">
                 <svg width="15" height="15"><use xlink:href="img/sprite_auto.svg#icon-instagram"></use></svg>
-                <span>Instagram</span>
+                <span class="footer__social-text">Instagram</span>
               </a>
             </li>
             <li>
               <a class="footer__menu-link" href="#">
                 <svg width="15" height="15"><use xlink:href="img/sprite_auto.svg#icon-pinterest"></use></svg>
-                <span>Pinterest</span>
+                <span class="footer__social-text">Pinterest</span>
               </a>
             </li>
             <li>
               <a class="footer__menu-link" href="#">
                 <svg width="15" height="13"><use xlink:href="img/sprite_auto.svg#icon-twitter"></use></svg>
-                <span>Twitter</span>
+                <span class="footer__social-text">Twitter</span>
               </a>
             </li>
           </ul>
